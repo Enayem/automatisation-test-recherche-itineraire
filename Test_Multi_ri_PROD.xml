@@ -1,0 +1,4130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c9a59d9e-c115-11e6-b4bd-5cc5d476dedc" activeEnvironment="Default" name="Test_Multi_ri_PROD" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+	<con:settings/>
+	<con:interface xsi:type="con:WsdlInterface" id="c9a59d9f-c115-11e6-b9cf-5cc5d476dedc" wsaVersion="NONE" name="SmartMoveServiceSoapBinding" type="wsdl" bindingName="http://smartmove.ixxi/SmartMoveServiceSoapBinding" soapVersion="1_2" anonymous="optional" definition="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache type="TEXT" rootPart="">
+			<con:part>
+				<con:url/>
+				<con:content><![CDATA[
+					<wsdl:definitions name="SmartMoveService" targetNamespace="http://smartmove.ixxi/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://smartmove.ixxi/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://smartmove.ixxi/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="affectScope" type="tns:affectScope"/>
+      <xs:element name="affectedLine" type="tns:affectedLine"/>
+      <xs:element name="callPoint" type="tns:callPoint"/>
+      <xs:element name="city" type="tns:city"/>
+      <xs:element name="direction" type="tns:direction"/>
+      <xs:element name="ecoComparator" type="tns:ecoComparator"/>
+      <xs:element name="getGroupOfLines" type="tns:getGroupOfLines"/>
+      <xs:element name="getGroupOfLinesResponse" type="tns:getGroupOfLinesResponse"/>
+      <xs:element name="getItinerary" type="tns:getItinerary"/>
+      <xs:element name="getItineraryResponse" type="tns:getItineraryResponse"/>
+      <xs:element name="getLineTimeTables" type="tns:getLineTimeTables"/>
+      <xs:element name="getLineTimeTablesResponse" type="tns:getLineTimeTablesResponse"/>
+      <xs:element name="getLines" type="tns:getLines"/>
+      <xs:element name="getLinesResponse" type="tns:getLinesResponse"/>
+      <xs:element name="getOperators" type="tns:getOperators"/>
+      <xs:element name="getOperatorsResponse" type="tns:getOperatorsResponse"/>
+      <xs:element name="getServicePatterns" type="tns:getServicePatterns"/>
+      <xs:element name="getServicePatternsResponse" type="tns:getServicePatternsResponse"/>
+      <xs:element name="getStatus" type="tns:getStatus"/>
+      <xs:element name="getStatusResponse" type="tns:getStatusResponse"/>
+      <xs:element name="getStopPlaces" type="tns:getStopPlaces"/>
+      <xs:element name="getStopPlacesResponse" type="tns:getStopPlacesResponse"/>
+      <xs:element name="getStopPoints" type="tns:getStopPoints"/>
+      <xs:element name="getStopPointsResponse" type="tns:getStopPointsResponse"/>
+      <xs:element name="getStops" type="tns:getStops"/>
+      <xs:element name="getStopsResponse" type="tns:getStopsResponse"/>
+      <xs:element name="groupOfLinesResultat" type="tns:groupOfLinesResultat"/>
+      <xs:element name="infoMessage" type="tns:infoMessage"/>
+      <xs:element name="itineraryResultat" type="tns:itineraryResultat"/>
+      <xs:element name="line" type="tns:line"/>
+      <xs:element name="lineJourney" type="tns:lineJourney"/>
+      <xs:element name="lineTimeTable" type="tns:lineTimeTable"/>
+      <xs:element name="lineTimeTablesResultat" type="tns:lineTimeTablesResultat"/>
+      <xs:element name="linesResultat" type="tns:linesResultat"/>
+      <xs:element name="notice" type="tns:notice"/>
+      <xs:element name="objectId" type="tns:objectId"/>
+      <xs:element name="operatorsResultat" type="tns:operatorsResultat"/>
+      <xs:element name="pairDate" type="tns:pairDate"/>
+      <xs:element name="pairIdName" type="tns:pairIdName"/>
+      <xs:element name="resolveIds" type="tns:resolveIds"/>
+      <xs:element name="resolveIdsResponse" type="tns:resolveIdsResponse"/>
+      <xs:element name="resolveIdsResultat" type="tns:resolveIdsResultat"/>
+      <xs:element name="riGeoPoint" type="tns:riGeoPoint"/>
+      <xs:element name="riInput" type="tns:riInput"/>
+      <xs:element name="riItinerary" type="tns:riItinerary"/>
+      <xs:element name="searchGeoPoint" type="tns:searchGeoPoint"/>
+      <xs:element name="segment" type="tns:segment"/>
+      <xs:element name="serviceJourney" type="tns:serviceJourney"/>
+      <xs:element name="servicePattern" type="tns:servicePattern"/>
+      <xs:element name="servicePatternDetails" type="tns:servicePatternDetails"/>
+      <xs:element name="servicePatternsResultat" type="tns:servicePatternsResultat"/>
+      <xs:element name="setPerturbations" type="tns:setPerturbations"/>
+      <xs:element name="setPerturbationsResponse" type="tns:setPerturbationsResponse"/>
+      <xs:element name="situation" type="tns:situation"/>
+      <xs:element name="stop" type="tns:stop"/>
+      <xs:element name="stopPlace" type="tns:stopPlace"/>
+      <xs:element name="stopPlacesResultat" type="tns:stopPlacesResultat"/>
+      <xs:element name="stopPoint" type="tns:stopPoint"/>
+      <xs:element name="stopPointsResultat" type="tns:stopPointsResultat"/>
+      <xs:element name="stopsOnLine" type="tns:stopsOnLine"/>
+      <xs:element name="stopsResultat" type="tns:stopsResultat"/>
+      <xs:element name="trafficEventRef" type="tns:trafficEventRef"/>
+      <xs:element name="transport" type="tns:transport"/>
+      <xs:element name="transportSegmentDetails" type="tns:transportSegmentDetails"/>
+      <xs:element name="walkSegmentDetails" type="tns:walkSegmentDetails"/>
+      <xs:complexType name="getStatus">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="commands" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStatusResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getServicePatterns">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="lineId" type="xs:string"/>
+          <xs:element minOccurs="0" name="directionId" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getServicePatternsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:servicePatternsResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="servicePatternsResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="servicePatterns" type="tns:servicePatternDetails"/>
+          <xs:element maxOccurs="unbounded" name="notes" type="tns:notice"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="servicePatternDetails">
+        <xs:sequence>
+          <xs:element ref="tns:line"/>
+          <xs:element name="direction" type="tns:pairIdName"/>
+          <xs:element maxOccurs="unbounded" name="stopPoints" type="tns:stopPoint"/>
+          <xs:element maxOccurs="unbounded" name="servicePatternNotes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="line">
+        <xs:sequence>
+          <xs:element ref="tns:transport"/>
+          <xs:element name="groupOfLines" type="tns:pairIdName"/>
+          <xs:element maxOccurs="unbounded" name="directions" type="tns:direction"/>
+          <xs:element maxOccurs="unbounded" name="lineNotes" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="flexibleLineNotes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="accessibility" type="xs:string" use="required"/>
+        <xs:attribute name="flexibleType" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="transport">
+        <xs:sequence/>
+        <xs:attribute name="mode" type="xs:string" use="required"/>
+        <xs:attribute name="subMode" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="pairIdName">
+        <xs:sequence/>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="direction">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="notes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="stopPoint">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tns:city"/>
+          <xs:element maxOccurs="unbounded" name="stopPointNotes" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="stopPointInDirectionNotes" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="lines" type="tns:line"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="latitude" type="xs:double" use="required"/>
+        <xs:attribute name="longitude" type="xs:double" use="required"/>
+        <xs:attribute name="accessibility" type="xs:string" use="required"/>
+        <xs:attribute name="spijpStopInStation" type="xs:boolean" use="required"/>
+        <xs:attribute name="spijpForBoarding" type="xs:boolean" use="required"/>
+        <xs:attribute name="spijpForAlighting" type="xs:boolean" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="city">
+        <xs:sequence/>
+        <xs:attribute name="inseeCode" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="notice">
+        <xs:simpleContent>
+          <xs:extension base="xs:string">
+            <xs:attribute name="id" type="xs:string" use="required"/>
+          </xs:extension>
+        </xs:simpleContent>
+      </xs:complexType>
+      <xs:complexType name="getItinerary">
+        <xs:sequence>
+          <xs:element name="user" type="xs:string"/>
+          <xs:element name="startPoint" type="tns:riInput"/>
+          <xs:element name="endPoint" type="tns:riInput"/>
+          <xs:element name="time" type="xs:dateTime"/>
+          <xs:element name="startFrom" type="xs:boolean"/>
+          <xs:element name="withTrafficEvents" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="prefNetworks" type="xs:string"/>
+          <xs:element name="prefJourney" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="exclusionLines" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="exclusionStops" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="inclusionLines" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="inclusionStops" type="xs:string"/>
+          <xs:element name="withMobility" type="xs:boolean"/>
+          <xs:element name="withDetails" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="applyFileForScoring" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="withEcoComparator" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="riInput">
+        <xs:sequence/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:string"/>
+        <xs:attribute name="latitude" type="xs:double" use="required"/>
+        <xs:attribute name="longitude" type="xs:double" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="getItineraryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:itineraryResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="itineraryResultat">
+        <xs:sequence>
+          <xs:element name="currentTime" type="xs:dateTime"/>
+          <xs:element maxOccurs="unbounded" name="itineraries" type="tns:riItinerary"/>
+          <xs:element maxOccurs="unbounded" name="notes" type="tns:notice"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="riItinerary">
+        <xs:sequence>
+          <xs:element name="type" type="tns:itineraryType"/>
+          <xs:element name="startTime" type="xs:dateTime"/>
+          <xs:element name="endTime" type="xs:dateTime"/>
+          <xs:element name="duration" type="xs:int"/>
+          <xs:element name="connectionNumber" type="xs:int"/>
+          <xs:element name="impactPerburbation" type="tns:impactPerturbationType"/>
+          <xs:element name="accessibility" type="xs:string"/>
+          <xs:element minOccurs="0" ref="tns:ecoComparator"/>
+          <xs:element maxOccurs="unbounded" name="trafficEvents" type="tns:situation"/>
+          <xs:element maxOccurs="unbounded" name="itinerarySegments" type="tns:segment"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ecoComparator">
+        <xs:sequence>
+          <xs:element name="distance" type="xs:double"/>
+          <xs:element name="transportEmissions" type="xs:double"/>
+          <xs:element name="personalCarEmissions" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="situation">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string"/>
+          <xs:element name="version" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="validityPeriod" type="tns:pairDate"/>
+          <xs:element name="publicationPeriod" type="tns:pairDate"/>
+          <xs:element name="reason" type="xs:string"/>
+          <xs:element name="subReason" type="xs:string"/>
+          <xs:element ref="tns:affectScope"/>
+          <xs:element maxOccurs="unbounded" name="infoMessages" type="tns:infoMessage"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="pairDate">
+        <xs:sequence/>
+        <xs:attribute name="startDate" type="xs:dateTime" use="required"/>
+        <xs:attribute name="endDate" type="xs:dateTime" use="required"/>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="affectScope">
+        <xs:sequence>
+          <xs:element name="id" type="xs:string"/>
+          <xs:element name="groupOfLines" type="tns:pairIdName"/>
+          <xs:element maxOccurs="unbounded" name="lines" type="tns:affectedLine"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="affectedLine">
+        <xs:sequence>
+          <xs:element name="impact" type="tns:perturbationImpact"/>
+          <xs:element maxOccurs="unbounded" name="stopPoints" type="tns:pairIdName"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="infoMessage">
+        <xs:sequence>
+          <xs:element name="shortContent" type="xs:string"/>
+          <xs:element name="longContent" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="infoChannelCode" type="xs:string" use="required"/>
+        <xs:attribute name="title" type="xs:string" use="required"/>
+        <xs:attribute name="versionContent" type="xs:string" use="required"/>
+        <xs:attribute name="creationTime" type="xs:dateTime" use="required"/>
+        <xs:attribute name="contentModificationTime" type="xs:dateTime" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="segment">
+        <xs:sequence>
+          <xs:element name="startTime" type="xs:dateTime"/>
+          <xs:element name="endTime" type="xs:dateTime"/>
+          <xs:element name="duration" type="xs:int"/>
+          <xs:element ref="tns:transport"/>
+          <xs:element name="impactPerburbation" type="tns:impactPerturbationType"/>
+          <xs:element maxOccurs="unbounded" name="trafficEventsRefs" type="tns:trafficEventRef"/>
+          <xs:element minOccurs="0" name="details" type="tns:segmentDetails"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="trafficEventRef">
+        <xs:sequence/>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="impactPerburbation" type="tns:impactPerturbationType" use="required"/>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="segmentDetails">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="transportSegmentDetails">
+        <xs:complexContent>
+          <xs:extension base="tns:segmentDetails">
+            <xs:sequence>
+              <xs:element ref="tns:line"/>
+              <xs:element ref="tns:direction"/>
+              <xs:element name="destination" type="tns:pairIdName"/>
+              <xs:element name="lastCallForServiceLinkWithLine" type="xs:boolean"/>
+              <xs:element ref="tns:servicePattern"/>
+              <xs:element ref="tns:serviceJourney"/>
+              <xs:element maxOccurs="unbounded" name="points" type="tns:riGeoPoint"/>
+              <xs:element minOccurs="0" ref="tns:ecoComparator"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="servicePattern">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="servicePatternNotes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="serviceJourney">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="serviceJourneyNotes" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="flexibleServiceNotes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="flexibleType" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="riGeoPoint">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tns:city"/>
+          <xs:element maxOccurs="unbounded" name="callPointNotes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="accessibility" type="xs:string" use="required"/>
+        <xs:attribute name="latitude" type="xs:double" use="required"/>
+        <xs:attribute name="longitude" type="xs:double" use="required"/>
+        <xs:attribute name="stopInStation" type="xs:boolean" use="required"/>
+        <xs:attribute name="schedule" type="xs:dateTime" use="required"/>
+        <xs:attribute name="zone" type="xs:string"/>
+      </xs:complexType>
+      <xs:complexType name="walkSegmentDetails">
+        <xs:complexContent>
+          <xs:extension base="tns:segmentDetails">
+            <xs:sequence>
+              <xs:element name="startPoint" type="tns:riGeoPoint"/>
+              <xs:element name="endPoint" type="tns:riGeoPoint"/>
+              <xs:element minOccurs="0" ref="tns:ecoComparator"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="getStopPoints">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element name="sortAlpha" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="groupOfLinesId" type="xs:string"/>
+          <xs:element minOccurs="0" name="lineId" type="xs:string"/>
+          <xs:element minOccurs="0" name="directionId" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="stopPlaceId" type="xs:string"/>
+          <xs:element minOccurs="0" name="fromCity" type="xs:string"/>
+          <xs:element minOccurs="0" name="toCity" type="xs:string"/>
+          <xs:element minOccurs="0" name="geoPoint" type="tns:searchGeoPoint"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="searchGeoPoint">
+        <xs:sequence>
+          <xs:element name="latitude" type="xs:double"/>
+          <xs:element name="longitude" type="xs:double"/>
+          <xs:element name="radius" type="xs:double"/>
+          <xs:element name="deltaLon" type="xs:double"/>
+          <xs:element name="deltaLat" type="xs:double"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStopPointsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:stopPointsResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stopPointsResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="stopPoints" type="tns:stopPoint"/>
+          <xs:element maxOccurs="unbounded" name="notes" type="tns:notice"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getGroupOfLines">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getGroupOfLinesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:groupOfLinesResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="groupOfLinesResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="groupsOfLines" type="tns:pairIdName"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="resolveIds">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="typeEntityIds" type="tns:objectId"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="typeIds" type="tns:objectId"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="objectId">
+        <xs:sequence/>
+        <xs:attribute name="type" type="xs:string" use="required"/>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="entityId" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="resolveIdsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:resolveIdsResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="resolveIdsResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="objects" type="tns:objectId"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOperators">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getOperatorsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:operatorsResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="operatorsResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="operators" type="tns:pairIdName"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getLines">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="operatorId" type="xs:string"/>
+          <xs:element minOccurs="0" name="groupOfLinesId" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getLinesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:linesResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="linesResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="lines" type="tns:line"/>
+          <xs:element maxOccurs="unbounded" name="notes" type="tns:notice"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStops">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element name="maxResults" type="xs:int"/>
+          <xs:element minOccurs="0" name="stopPlaceId" type="xs:string"/>
+          <xs:element minOccurs="0" name="stopPointId" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="lineId" type="xs:string"/>
+          <xs:element minOccurs="0" name="directionId" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStopsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:stopsResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="stopsResultat">
+        <xs:sequence>
+          <xs:element name="currentTime" type="xs:dateTime"/>
+          <xs:element maxOccurs="unbounded" name="stopsOnLines" type="tns:stopsOnLine"/>
+          <xs:element maxOccurs="unbounded" name="notes" type="tns:notice"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="stopsOnLine">
+        <xs:sequence>
+          <xs:element ref="tns:line"/>
+          <xs:element name="stopPoint" type="tns:pairIdName"/>
+          <xs:element name="accessibility" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" name="stops" type="tns:stop"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="stop">
+        <xs:sequence>
+          <xs:element ref="tns:direction"/>
+          <xs:element name="destination" type="tns:pairIdName"/>
+          <xs:element name="servicePattern" type="tns:pairIdName"/>
+          <xs:element name="stopInStation" type="xs:boolean"/>
+          <xs:element name="startTime" type="xs:dateTime"/>
+          <xs:element name="stopTime" type="xs:dateTime"/>
+          <xs:element ref="tns:serviceJourney"/>
+          <xs:element maxOccurs="unbounded" name="callPointNotes" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStopPlaces">
+        <xs:sequence>
+          <xs:element name="date" type="xs:dateTime"/>
+          <xs:element name="sortAlpha" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="groupOfLinesId" type="xs:string"/>
+          <xs:element minOccurs="0" name="lineId" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+          <xs:element minOccurs="0" name="stopPointId" type="xs:string"/>
+          <xs:element minOccurs="0" name="geoPoint" type="tns:searchGeoPoint"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getStopPlacesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:stopPlacesResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stopPlacesResultat">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="stopPlaces" type="tns:stopPlace"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="stopPlace">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="lines" type="tns:line"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="latitude" type="xs:double" use="required"/>
+        <xs:attribute name="longitude" type="xs:double" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="getLineTimeTables">
+        <xs:sequence>
+          <xs:element name="startDate" type="xs:dateTime"/>
+          <xs:element name="endDate" type="xs:dateTime"/>
+          <xs:element name="maxResults" type="xs:int"/>
+          <xs:element maxOccurs="unbounded" name="lineId" type="xs:string"/>
+          <xs:element minOccurs="0" name="directionId" type="xs:string"/>
+          <xs:element name="offsetStartDate" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getLineTimeTablesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:lineTimeTablesResultat"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="lineTimeTablesResultat">
+        <xs:sequence>
+          <xs:element name="currentTime" type="xs:dateTime"/>
+          <xs:element maxOccurs="unbounded" name="lineTimeTables" type="tns:lineTimeTable"/>
+          <xs:element maxOccurs="unbounded" name="notes" type="tns:notice"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="lineTimeTable">
+        <xs:sequence>
+          <xs:element ref="tns:line"/>
+          <xs:element ref="tns:direction"/>
+          <xs:element maxOccurs="unbounded" name="lineJourneys" type="tns:lineJourney"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="lineJourney">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tns:servicePattern"/>
+          <xs:element name="destination" type="tns:pairIdName"/>
+          <xs:element ref="tns:serviceJourney"/>
+          <xs:element maxOccurs="unbounded" name="callPoints" type="tns:callPoint"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType final="extension restriction" name="callPoint">
+        <xs:sequence>
+          <xs:element minOccurs="0" ref="tns:city"/>
+          <xs:element maxOccurs="unbounded" name="callPointNotes" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="name" type="xs:string" use="required"/>
+        <xs:attribute name="startTime" type="xs:dateTime" use="required"/>
+        <xs:attribute name="stopTime" type="xs:dateTime" use="required"/>
+        <xs:attribute name="accessibility" type="xs:string" use="required"/>
+        <xs:attribute name="latitude" type="xs:double" use="required"/>
+        <xs:attribute name="longitude" type="xs:double" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="setPerturbations">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" name="perts" type="tns:situation"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setPerturbationsResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="itineraryType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="REGULAR"/>
+          <xs:enumeration value="ADVISABLE"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="impactPerturbationType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="normal"/>
+          <xs:enumeration value="information"/>
+          <xs:enumeration value="alert"/>
+          <xs:enumeration value="critical"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="perturbationImpact">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="information"/>
+          <xs:enumeration value="access_closed"/>
+          <xs:enumeration value="link_closed"/>
+          <xs:enumeration value="station_closed"/>
+          <xs:enumeration value="trafic_slow"/>
+          <xs:enumeration value="trafic_stopped"/>
+          <xs:enumeration value="path_closed"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="resolveIdsResponse">
+    <wsdl:part name="parameters" element="tns:resolveIdsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGroupOfLinesResponse">
+    <wsdl:part name="parameters" element="tns:getGroupOfLinesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="resolveIds">
+    <wsdl:part name="parameters" element="tns:resolveIds"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLines">
+    <wsdl:part name="parameters" element="tns:getLines"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setPerturbationsResponse">
+    <wsdl:part name="parameters" element="tns:setPerturbationsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getItineraryResponse">
+    <wsdl:part name="parameters" element="tns:getItineraryResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStopPoints">
+    <wsdl:part name="parameters" element="tns:getStopPoints"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStopPointsResponse">
+    <wsdl:part name="parameters" element="tns:getStopPointsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStopPlacesResponse">
+    <wsdl:part name="parameters" element="tns:getStopPlacesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStopPlaces">
+    <wsdl:part name="parameters" element="tns:getStopPlaces"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getServicePatternsResponse">
+    <wsdl:part name="parameters" element="tns:getServicePatternsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGroupOfLines">
+    <wsdl:part name="parameters" element="tns:getGroupOfLines"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStatus">
+    <wsdl:part name="parameters" element="tns:getStatus"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperators">
+    <wsdl:part name="parameters" element="tns:getOperators"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStatusResponse">
+    <wsdl:part name="parameters" element="tns:getStatusResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setPerturbations">
+    <wsdl:part name="parameters" element="tns:setPerturbations"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLineTimeTablesResponse">
+    <wsdl:part name="parameters" element="tns:getLineTimeTablesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLineTimeTables">
+    <wsdl:part name="parameters" element="tns:getLineTimeTables"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStops">
+    <wsdl:part name="parameters" element="tns:getStops"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getStopsResponse">
+    <wsdl:part name="parameters" element="tns:getStopsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOperatorsResponse">
+    <wsdl:part name="parameters" element="tns:getOperatorsResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getItinerary">
+    <wsdl:part name="parameters" element="tns:getItinerary"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getLinesResponse">
+    <wsdl:part name="parameters" element="tns:getLinesResponse"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getServicePatterns">
+    <wsdl:part name="parameters" element="tns:getServicePatterns"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SmartMove">
+    <wsdl:operation name="getStatus">
+      <wsdl:input name="getStatus" message="tns:getStatus"></wsdl:input>
+      <wsdl:output name="getStatusResponse" message="tns:getStatusResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServicePatterns">
+      <wsdl:input name="getServicePatterns" message="tns:getServicePatterns"></wsdl:input>
+      <wsdl:output name="getServicePatternsResponse" message="tns:getServicePatternsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItinerary">
+      <wsdl:input name="getItinerary" message="tns:getItinerary"></wsdl:input>
+      <wsdl:output name="getItineraryResponse" message="tns:getItineraryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopPoints">
+      <wsdl:input name="getStopPoints" message="tns:getStopPoints"></wsdl:input>
+      <wsdl:output name="getStopPointsResponse" message="tns:getStopPointsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupOfLines">
+      <wsdl:input name="getGroupOfLines" message="tns:getGroupOfLines"></wsdl:input>
+      <wsdl:output name="getGroupOfLinesResponse" message="tns:getGroupOfLinesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resolveIds">
+      <wsdl:input name="resolveIds" message="tns:resolveIds"></wsdl:input>
+      <wsdl:output name="resolveIdsResponse" message="tns:resolveIdsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperators">
+      <wsdl:input name="getOperators" message="tns:getOperators"></wsdl:input>
+      <wsdl:output name="getOperatorsResponse" message="tns:getOperatorsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLines">
+      <wsdl:input name="getLines" message="tns:getLines"></wsdl:input>
+      <wsdl:output name="getLinesResponse" message="tns:getLinesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStops">
+      <wsdl:input name="getStops" message="tns:getStops"></wsdl:input>
+      <wsdl:output name="getStopsResponse" message="tns:getStopsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopPlaces">
+      <wsdl:input name="getStopPlaces" message="tns:getStopPlaces"></wsdl:input>
+      <wsdl:output name="getStopPlacesResponse" message="tns:getStopPlacesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLineTimeTables">
+      <wsdl:input name="getLineTimeTables" message="tns:getLineTimeTables"></wsdl:input>
+      <wsdl:output name="getLineTimeTablesResponse" message="tns:getLineTimeTablesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPerturbations">
+      <wsdl:input name="setPerturbations" message="tns:setPerturbations"></wsdl:input>
+      <wsdl:output name="setPerturbationsResponse" message="tns:setPerturbationsResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SmartMoveServiceSoapBinding" type="tns:SmartMove">
+    <soap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getStatus">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getStatus">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStatusResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getServicePatterns">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getServicePatterns">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getServicePatternsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getItinerary">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getItinerary">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getItineraryResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGroupOfLines">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getGroupOfLines">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getGroupOfLinesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopPoints">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getStopPoints">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStopPointsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="resolveIds">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="resolveIds">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="resolveIdsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOperators">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getOperators">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOperatorsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLines">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getLines">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLinesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStops">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getStops">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStopsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLineTimeTables">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getLineTimeTables">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getLineTimeTablesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getStopPlaces">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="getStopPlaces">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getStopPlacesResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setPerturbations">
+      <soap12:operation soapAction="" style="document"/>
+      <wsdl:input name="setPerturbations">
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setPerturbationsResponse">
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SmartMoveService">
+    <wsdl:port name="SmartMovePort" binding="tns:SmartMoveServiceSoapBinding">
+      <soap12:address location="http://localhost:9090/SmartMovePort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
+				]]></con:content>
+				<con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+			</con:part>
+		</con:definitionCache>
+		<con:endpoints>
+			<con:endpoint>http://localhost:9090/SmartMovePort</con:endpoint>
+		</con:endpoints>
+		<con:operation id="c9a59da0-c115-11e6-9c4d-5cc5d476dedc" isOneWay="false" action="" name="getItinerary" bindingOperationName="getItinerary" type="Request-Response" outputName="getItineraryResponse" inputName="getItinerary" receivesAttachments="false" sendsAttachments="false">
+			<con:settings/>
+		</con:operation>
+		
+	</con:interface>
+ 	
+	<con:testSuite id="c9a59da1-c115-11e6-8d4a-5cc5d476dedc" name="Test_Multi_ri_PROD">
+		<con:settings/>
+		<con:runType>SEQUENTIAL</con:runType>
+        
+		<con:testCase id="c9a5c4ae-c115-11e6-a310-5cc5d476dedc" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Test_Multi_ri_PROD" searchProperties="true">
+			<con:settings/>
+			<con:testStep type="request" name="RI_REF 002 - rue jacques Prévert paris 75020 -- Glacière" id="c9c7f2b0-c115-11e6-b83f-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 002 - rue jacques Prévert paris 75020 -- Glacière" id="c9c7f2b1-c115-11e6-b7a5-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat rue jacques Prévert paris 75020} longitude=${#TestCase#long rue jacques Prévert paris 75020}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Glacière} longitude=${#TestCase#long Glacière}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="c9c7f2b2-c115-11e6-8b8c-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>2</line>
+    <origine>Père-Lachaise</origine>
+    <destination>Nation</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>6</line>
+    <origine>Nation</origine>
+    <destination>Glacière</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="c9c7f2b3-c115-11e6-b889-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="c9c7f2b4-c115-11e6-9cb8-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 006 - 13 rue Gambetta Saint-Ouen -- Gare de Lyon" id="c9e31bd2-c115-11e6-9108-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 006 - 13 rue Gambetta Saint-Ouen -- Gare de Lyon" id="c9e31bd3-c115-11e6-9881-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 13 rue Gambetta Saint-Ouen} longitude=${#TestCase#long 13 rue Gambetta Saint-Ouen}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="c9e31bd4-c115-11e6-9f9d-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>13</line>
+    <origine>Garibaldi</origine>
+    <destination>Saint-Lazare</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>14</line>
+    <origine>Saint-Lazare</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="c9e31bd5-c115-11e6-b8d8-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="c9e31bd6-c115-11e6-947c-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 007 - 13 rue Gambetta Saint-Ouen -- Miromesnil (METRO), Paris" id="c9e90f40-c115-11e6-ad3c-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 007 - 13 rue Gambetta Saint-Ouen -- Miromesnil (METRO), Paris" id="c9e90f41-c115-11e6-b888-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 13 rue Gambetta Saint-Ouen} longitude=${#TestCase#long 13 rue Gambetta Saint-Ouen}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Miromesnil (METRO), Paris} longitude=${#TestCase#long Miromesnil (METRO), Paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="c9e90f42-c115-11e6-9887-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>13</line>
+    <origine>Garibaldi</origine>
+    <destination>Miromesnil</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="c9e90f43-c115-11e6-97fa-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="c9e90f44-c115-11e6-97e0-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 013 - 11 cité riverin, 75010 paris -- Gare de Lyon" id="c9ee8d80-c115-11e6-b268-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 013 - 11 cité riverin, 75010 paris -- Gare de Lyon" id="c9ee8d81-c115-11e6-870e-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 11 cité riverin, 75010 paris} longitude=${#TestCase#long 11 cité riverin, 75010 paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="c9ee8d82-c115-11e6-8049-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line>65</line>
+    <origine>JACQUES BONSERGENT</origine>
+    <destination>GARE DE LYON.</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="c9ee8d83-c115-11e6-93ad-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="c9ee8d84-c115-11e6-93ce-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 016 - Gare de Lyon -- Robespierre" id="c9f2ac30-c115-11e6-8f9a-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 016 - Gare de Lyon -- Robespierre" id="c9f2ac31-c115-11e6-8233-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Robespierre} longitude=${#TestCase#long Robespierre}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="c9f2d340-c115-11e6-b662-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>RER</mode>
+    <line>A</line>
+    <origine>Gare de Lyon</origine>
+    <destination>Nation</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>9</line>
+    <origine>Nation</origine>
+    <destination>Robespierre</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="c9f2d341-c115-11e6-ba20-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="c9f2d342-c115-11e6-a70e-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 022 - 31, rue de l'abbé groult, 75015 Paris -- Gare de Lyon" id="ca0a2bd0-c115-11e6-a8ee-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 022 - 31, rue de l'abbé groult, 75015 Paris -- Gare de Lyon" id="ca0a2bd1-c115-11e6-a5d7-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 31, rue de l'abbé groult, 75015 Paris} longitude=${#TestCase#long 31, rue de l'abbé groult, 75015 Paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca0a52e2-c115-11e6-8271-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>8</line>
+    <origine>Félix Faure</origine>
+    <destination>Madeleine</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>14</line>
+    <origine>Madeleine</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca0a52e3-c115-11e6-9625-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca0a52e4-c115-11e6-bad8-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 025 - 129, rue du Ranelagh, paris -- Gare de Lyon" id="ca13c8c0-c115-11e6-8409-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 025 - 129, rue du Ranelagh, paris -- Gare de Lyon" id="ca13c8c1-c115-11e6-82c9-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 129, rue du Ranelagh, paris} longitude=${#TestCase#long 129, rue du Ranelagh, paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca13c8c2-c115-11e6-a5a5-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>9</line>
+    <origine>Ranelagh</origine>
+    <destination>Saint-Augustin</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>14</line>
+    <origine>Saint-Lazare</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca13c8c3-c115-11e6-9fdb-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca13c8c4-c115-11e6-9363-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 027 - Les Gobelins (METRO), Paris -- 27, rue Carnot, Ivry sur seine" id="ca2ad330-c115-11e6-b946-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 027 - Les Gobelins (METRO), Paris -- 27, rue Carnot, Ivry sur seine" id="ca2afa40-c115-11e6-9c2e-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Les Gobelins (METRO), Paris} longitude=${#TestCase#long Les Gobelins (METRO), Paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 27, rue Carnot, Ivry sur seine} longitude=${#TestCase#long 27, rue Carnot, Ivry sur seine}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca2afa41-c115-11e6-bf20-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>7</line>
+    <origine>Les Gobelins</origine>
+    <destination>Le Kremlin-Bicêtre</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca2afa42-c115-11e6-8d02-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca2afa43-c115-11e6-b91d-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 031 - Gare de Lyon --  Gare Saint Lazare" id="ca3840ae-c115-11e6-a61f-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 031 - Gare de Lyon --  Gare Saint Lazare" id="ca3840af-c115-11e6-a32b-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare Saint Lazare} longitude=${#TestCase#long Gare Saint Lazare}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca3867c0-c115-11e6-a4bd-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>14</line>
+    <origine>Gare de Lyon</origine>
+    <destination>Saint-Lazare</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca3867c1-c115-11e6-9edf-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca3867c2-c115-11e6-99fb-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 033 -  Gare Saint Lazare -- La Frette Montigny" id="ca40cc2e-c115-11e6-ac76-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 033 -  Gare Saint Lazare -- La Frette Montigny" id="ca40cc2f-c115-11e6-b92d-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Gare Saint Lazare} longitude=${#TestCase#long Gare Saint Lazare}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat La Frette Montigny} longitude=${#TestCase#long La Frette Montigny}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca40cc30-c115-11e6-8e32-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>SNCF</mode>
+    <line>J</line>
+    <origine>Gare Saint-Lazare</origine>
+    <destination>La Frette Montigny</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca40f340-c115-11e6-9f33-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca40f341-c115-11e6-9d23-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 034 - Port Royal (RER) -- Aéroport de Roissy" id="ca5d2dd0-c115-11e6-bcd7-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 034 - Port Royal (RER) -- Aéroport de Roissy" id="ca5d2dd1-c115-11e6-9b66-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Port Royal (RER)} longitude=${#TestCase#long Port Royal (RER)}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Aéroport de Roissy} longitude=${#TestCase#long Aéroport de Roissy}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca5d54de-c115-11e6-bd2e-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>RER</mode>
+    <line>B</line>
+    <origine>Port Royal</origine>
+    <destination>Aéroport Charles de Gaulle 2 TGV</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca5d54df-c115-11e6-8d17-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca5d54e0-c115-11e6-9411-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 035 - EDGAR QUINET  -- 133 Avenue de la Résistance, 92350 Le Plessis-Robinson" id="ca9de050-c115-11e6-8622-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 035 - EDGAR QUINET  -- 133 Avenue de la Résistance, 92350 Le Plessis-Robinson" id="ca9de051-c115-11e6-9711-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat EDGAR QUINET} longitude=${#TestCase#long EDGAR QUINET}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 133 Avenue de la Résistance, 92350 Le Plessis-Robinson} longitude=${#TestCase#long 133 Avenue de la Résistance, 92350 Le Plessis-Robinson}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="ca9e075e-c115-11e6-a697-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>6</line>
+    <origine>Edgar-Quinet</origine>
+    <destination>Denfert-Rochereau</destination>
+  </segment>
+  <segment>
+    <mode>RER</mode>
+    <line>B</line>
+    <origine>Denfert-Rochereau</origine>
+    <destination>Robinson</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="ca9e075f-c115-11e6-a42e-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="ca9e0760-c115-11e6-a7e6-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 036 - Vincennes (RER), Vincennes -- Parc De Sceaux (RER), Antony" id="cab7d0ee-c115-11e6-b95c-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 036 - Vincennes (RER), Vincennes -- Parc De Sceaux (RER), Antony" id="cab7f800-c115-11e6-8192-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Vincennes (RER), Vincennes} longitude=${#TestCase#long Vincennes (RER), Vincennes}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Parc De Sceaux (RER), Antony} longitude=${#TestCase#long Parc De Sceaux (RER), Antony}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cab7f801-c115-11e6-abc5-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>RER</mode>
+    <line>A</line>
+    <origine>Vincennes</origine>
+    <destination>Châtelet-Les Halles</destination>
+  </segment>
+  <segment>
+    <mode>RER</mode>
+    <line>B</line>
+    <origine>Châtelet-Les Halles</origine>
+    <destination>Parc de Sceaux</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cab7f802-c115-11e6-9906-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cab7f803-c115-11e6-b823-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 005 - 203 rue crimée 75019 -- 55 rue Vedrines 91170 Viry Chatillon" id="caceb450-c115-11e6-8c84-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 005 - 203 rue crimée 75019 -- 55 rue Vedrines 91170 Viry Chatillon" id="caceb451-c115-11e6-993e-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 203 rue crimée 75019} longitude=${#TestCase#long 203 rue crimée 75019}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 55 rue Vedrines 91170 Viry Chatillon} longitude=${#TestCase#long 55 rue Vedrines 91170 Viry Chatillon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="caceb452-c115-11e6-8cd1-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line> 54</line>
+    <origine> CRIMEE - ARCHEREAU</origine>
+    <destination> LA FAYETTE - DUNKERQUE</destination>
+  </segment>
+  <segment>
+    <mode>RER</mode>
+    <line> D</line>
+    <origine> Gare du Nord</origine>
+    <destination> Juvisy-sur-Orge</destination>
+  </segment>
+  <segment>
+    <mode> Optile</mode>
+    <line>DM03</line>
+    <origine> GARE DE JUVISY</origine>
+    <destination> CAFÉ DES SPORTS</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="caceb453-c115-11e6-a254-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="caceb454-c115-11e6-b048-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 011 - 26, allée du Coudrier 91330 Yerres -- Gare de Lyon" id="cad6ca9e-c115-11e6-a8fd-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 011 - 26, allée du Coudrier 91330 Yerres -- Gare de Lyon" id="cad6ca9f-c115-11e6-8ef6-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 26, allée du Coudrier 91330 Yerres} longitude=${#TestCase#long 26, allée du Coudrier 91330 Yerres}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cad6f1ae-c115-11e6-a57d-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Optile</mode>
+    <line> I</line>
+    <origine> GLAIEULS</origine>
+    <destination> YERRES GARE</destination>
+  </segment>
+  <segment>
+    <mode>RER</mode>
+    <line> D</line>
+    <origine> Yerres</origine>
+    <destination> Gare de Lyon (Banlieue)</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cad6f1af-c115-11e6-b885-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cad6f1b0-c115-11e6-a870-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 023 - 31, rue de l'abbé groult, 75015 Paris -- Hôtel De Ville (METRO), Paris" id="caeac7d0-c115-11e6-8777-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 023 - 31, rue de l'abbé groult, 75015 Paris -- Hôtel De Ville (METRO), Paris" id="caeac7d1-c115-11e6-9aab-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 31, rue de l'abbé groult, 75015 Paris} longitude=${#TestCase#long 31, rue de l'abbé groult, 75015 Paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Hôtel De Ville (METRO), Paris} longitude=${#TestCase#long Hôtel De Ville (METRO), Paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="caeaeede-c115-11e6-958d-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line> 8</line>
+    <origine> Félix Faure</origine>
+    <destination> Concorde</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line> 1</line>
+    <origine> Concorde</origine>
+    <destination> Hôtel de Ville</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="caeaeedf-c115-11e6-be3b-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="caeaeee0-c115-11e6-801d-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 014 - 11 cité riverin, 75010 paris -- Robespierre" id="caeaeee1-c115-11e6-b620-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 014 - 11 cité riverin, 75010 paris -- Robespierre" id="caeaeee2-c115-11e6-b21f-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 11 cité riverin, 75010 paris} longitude=${#TestCase#long 11 cité riverin, 75010 paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Robespierre} longitude=${#TestCase#long Robespierre}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="caeb15f0-c115-11e6-8670-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>9</line>
+    <origine>République</origine>
+    <destination>Robespierre</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="caeb15f1-c115-11e6-a69a-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="caeb15f2-c115-11e6-ada2-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 028 - Gare de Lyon -- Gare d'Austerlitz" id="caefa9d2-c115-11e6-b251-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 028 - Gare de Lyon -- Gare d'Austerlitz" id="caefa9d3-c115-11e6-bc92-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare d'Austerlitz} longitude=${#TestCase#long Gare d'Austerlitz}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="caefa9d4-c115-11e6-96da-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line> 63</line>
+    <origine> GARE DE LYON</origine>
+    <destination> GARE D'AUSTERLITZ</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="caefa9d5-c115-11e6-820f-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="caefa9d6-c115-11e6-a172-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 026 - Charles - Michel (METRO) -- 129, rue du Ranelagh, paris" id="caf59d40-c115-11e6-bf1b-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 026 - Charles - Michel (METRO) -- 129, rue du Ranelagh, paris" id="caf59d41-c115-11e6-9a2d-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Charles - Michel (METRO)} longitude=${#TestCase#long Charles - Michel (METRO)}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 129, rue du Ranelagh, paris} longitude=${#TestCase#long 129, rue du Ranelagh, paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="caf59d42-c115-11e6-8015-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>10</line>
+    <origine>Charles Michels</origine>
+    <destination>Michel-Ange-Auteuil</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>9</line>
+    <origine>Michel-Ange-Auteuil</origine>
+    <destination>Ranelagh</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="caf5c450-c115-11e6-8881-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="caf5c451-c115-11e6-a3c2-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 001 - rue jacques Prévert paris 75020 -- Gare de Lyon" id="caf5c452-c115-11e6-9fbe-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 001 - rue jacques Prévert paris 75020 -- Gare de Lyon" id="caf5c453-c115-11e6-a4ad-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat rue jacques Prévert paris 75020} longitude=${#TestCase#long rue jacques Prévert paris 75020}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="caf5eb5e-c115-11e6-896a-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>2</line>
+    <origine>Père-Lachaise</origine>
+    <destination>Nation</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>1</line>
+    <origine>Nation</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="caf5eb5f-c115-11e6-a453-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="caf5eb60-c115-11e6-babc-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 003 - 6 Rue Véronèse 75013 -- 76 av de La Bourdonnais 75007" id="cb30d180-c115-11e6-8b2c-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 003 - 6 Rue Véronèse 75013 -- 76 av de La Bourdonnais 75007" id="cb30d181-c115-11e6-a695-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 6 Rue Véronèse 75013} longitude=${#TestCase#long 6 Rue Véronèse 75013}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 76 av de La Bourdonnais 75007} longitude=${#TestCase#long 76 av de La Bourdonnais 75007}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cb30d182-c115-11e6-a387-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>6</line>
+    <origine>Place d'Italie</origine>
+    <destination>La Motte-Picquet-Grenelle</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cb30d183-c115-11e6-94de-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cb30d184-c115-11e6-95e4-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 004 - 203 rue crimée 75019 -- Gare de Lyon" id="cb30d185-c115-11e6-9d07-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 004 - 203 rue crimée 75019 -- Gare de Lyon" id="cb30d186-c115-11e6-978b-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 203 rue crimée 75019} longitude=${#TestCase#long 203 rue crimée 75019}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cb30f890-c115-11e6-a716-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>7</line>
+    <origine>Crimée</origine>
+    <destination>Gare de l'Est</destination>
+  </segment>
+  <segment>
+    <mode>Bus</mode>
+    <line>65</line>
+    <origine>Gare de l'Est</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cb30f891-c115-11e6-892f-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cb30f892-c115-11e6-81e4-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 008 - 5 rue vercingétorix 75014 paris -- Gare de Lyon" id="cb3b58d0-c115-11e6-b0f5-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 008 - 5 rue vercingétorix 75014 paris -- Gare de Lyon" id="cb3b58d1-c115-11e6-9e5f-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 5 rue vercingétorix 75014 paris} longitude=${#TestCase#long 5 rue vercingétorix 75014 paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cb3b7fe2-c115-11e6-9078-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>13</line>
+    <origine>Gaîté</origine>
+    <destination>Champs-Elysées-Clémenceau</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>1</line>
+    <origine>Champs-Elysées-Clémenceau</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cb3b7fe3-c115-11e6-ab99-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cb3b7fe4-c115-11e6-97f3-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 010 - 5 rue vercingétorix 75014 paris -- Rue de la Montagne Sainte - Genevieve, 75005 paris" id="cb6241c0-c115-11e6-80a4-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 010 - 5 rue vercingétorix 75014 paris -- Rue de la Montagne Sainte - Genevieve, 75005 paris" id="cb6241c1-c115-11e6-8c52-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 5 rue vercingétorix 75014 paris} longitude=${#TestCase#long 5 rue vercingétorix 75014 paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Rue de la Montagne Sainte - Genevieve, 75005 paris} longitude=${#TestCase#long Rue de la Montagne Sainte - Genevieve, 75005 paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cb6241c2-c115-11e6-af50-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>13</line>
+    <origine>Gaîté</origine>
+    <destination>Duroc</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>10</line>
+    <origine>Duroc</origine>
+    <destination>Maubert-Mutualité</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cb6241c3-c115-11e6-ba11-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cb6241c4-c115-11e6-b9b6-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 015 - Rue de cotte Paris 75012 -- 11 cité riverin, 75010 paris" id="cb877d00-c115-11e6-b116-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 015 - Rue de cotte Paris 75012 -- 11 cité riverin, 75010 paris" id="cb877d01-c115-11e6-8d80-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Rue de cotte Paris 75012} longitude=${#TestCase#long Rue de cotte Paris 75012}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 11 cité riverin, 75010 paris} longitude=${#TestCase#long 11 cité riverin, 75010 paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cb877d02-c115-11e6-b7d4-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>8</line>
+    <origine>Ledru-Rollin</origine>
+    <destination>Strasbourg saint Denis</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cb87a410-c115-11e6-9ffd-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cb87a411-c115-11e6-b777-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 024 - 8 rue de l'étang 78430 Louveciennes -- Gare de Lyon" id="cb9e6062-c115-11e6-9037-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 024 - 8 rue de l'étang 78430 Louveciennes -- Gare de Lyon" id="cb9e6063-c115-11e6-b084-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 8 rue de l'étang 78430 Louveciennes} longitude=${#TestCase#long 8 rue de l'étang 78430 Louveciennes}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cb9e8770-c115-11e6-878b-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>SNCF</mode>
+    <line>L</line>
+    <origine>Louveciennes</origine>
+    <destination>La Défense (Grande Arche)</destination>
+  </segment>
+  <segment>
+    <mode>RER</mode>
+    <line>A</line>
+    <origine>La Défense (Grande Arche)</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cb9e8771-c115-11e6-9f98-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cb9e8772-c115-11e6-9a34-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 032 - 24 rue Jean Lurçat, 94800 villejuif -- Gare de lyon" id="cbb0fe00-c115-11e6-bd2d-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 032 - 24 rue Jean Lurçat, 94800 villejuif -- Gare de lyon" id="cbb0fe01-c115-11e6-9e45-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 24 rue Jean Lurçat, 94800 villejuif} longitude=${#TestCase#long 24 rue Jean Lurçat, 94800 villejuif}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de lyon} longitude=${#TestCase#long Gare de lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cbb12510-c115-11e6-bb53-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>7</line>
+    <origine>Villejuif-Louis Aragon</origine>
+    <destination>Place d'Italie</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>5</line>
+    <origine>Place d'Italie</origine>
+    <destination>Gare d'austerliz</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cbb12511-c115-11e6-963f-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cbb12512-c115-11e6-a392-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 009 - 5 rue vercingétorix 75014 paris -- 6 Rue Louis Armand, 75015 Paris" id="cbc39ba2-c115-11e6-8882-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 009 - 5 rue vercingétorix 75014 paris -- 6 Rue Louis Armand, 75015 Paris" id="cbc39ba3-c115-11e6-a0e8-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 5 rue vercingétorix 75014 paris} longitude=${#TestCase#long 5 rue vercingétorix 75014 paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat 6 Rue Louis Armand, 75015 Paris} longitude=${#TestCase#long 6 Rue Louis Armand, 75015 Paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cbc39ba4-c115-11e6-be2a-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>13</line>
+    <origine>Gaité</origine>
+    <destination>Porte de Vanves</destination>
+  </segment>
+  <segment>
+    <mode>Tram</mode>
+    <line>T3B</line>
+    <origine>Porte de vanves</origine>
+    <destination>Balard</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cbc3c2b0-c115-11e6-8a7e-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cbc3c2b1-c115-11e6-8ace-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 012 - 26, allée du Coudrier, 91330 Yerres -- Musée Maillol" id="cbce4a00-c115-11e6-bfed-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 012 - 26, allée du Coudrier, 91330 Yerres -- Musée Maillol" id="cbce4a01-c115-11e6-b888-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 26, allée du Coudrier, 91330 Yerres} longitude=${#TestCase#long 26, allée du Coudrier, 91330 Yerres}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Musée Maillol} longitude=${#TestCase#long Musée Maillol}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cbce4a02-c115-11e6-a340-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>RER</mode>
+    <line>D</line>
+    <origine>Yerres</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>14</line>
+    <origine>Gare de Lyon</origine>
+    <destination>Madeleine</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>12</line>
+    <origine>Madeleine</origine>
+    <destination>Rue du bac</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cbce4a03-c115-11e6-b1b4-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cbce7112-c115-11e6-b800-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 017 - Rue des écoles, Chartrettes -- Gare de Lyon" id="cbd798d0-c115-11e6-b515-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 017 - Rue des écoles, Chartrettes -- Gare de Lyon" id="cbd798d1-c115-11e6-85c6-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Rue des écoles, Chartrettes} longitude=${#TestCase#long Rue des écoles, Chartrettes}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cbd7bfde-c115-11e6-976d-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>SNCF</mode>
+    <line>R</line>
+    <origine>Gare Bois-le-Roi</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cbd7bfdf-c115-11e6-930c-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cbd7bfe0-c115-11e6-88bc-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 018 - Rue des 2 ponts Paris -- Gare de Lyon" id="cbf5f640-c115-11e6-8f56-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 018 - Rue des 2 ponts Paris -- Gare de Lyon" id="cbf5f641-c115-11e6-8ead-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Rue des 2 ponts Paris} longitude=${#TestCase#long Rue des 2 ponts Paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cbf5f642-c115-11e6-a329-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line>63</line>
+    <origine>Institut du Monde arabe</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cbf61d52-c115-11e6-a1b9-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cbf61d53-c115-11e6-bad8-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 019 - Rue des 2 ponts, paris -- Parc Zoologique de Paris (Zoo de Vincennes), Paris" id="cc38a490-c115-11e6-9c6e-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 019 - Rue des 2 ponts, paris -- Parc Zoologique de Paris (Zoo de Vincennes), Paris" id="cc38a491-c115-11e6-85cc-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Rue des 2 ponts, paris} longitude=${#TestCase#long Rue des 2 ponts, paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Parc Zoologique de Paris (Zoo de Vincennes), Paris} longitude=${#TestCase#long Parc Zoologique de Paris (Zoo de Vincennes), Paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cc38a492-c115-11e6-8d98-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line>86</line>
+    <origine>Pont de Sully</origine>
+    <destination>SAINT-MANDE - DEMI LUNE - PARC ZOOLOGIQUE</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cc38a493-c115-11e6-9d94-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cc38a494-c115-11e6-b08c-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 020 - 1 Rue André Suares, 75017 Paris -- Rue des 2 ponts, paris" id="cc4bb75e-c115-11e6-a2c2-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 020 - 1 Rue André Suares, 75017 Paris -- Rue des 2 ponts, paris" id="cc4bb75f-c115-11e6-83af-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 1 Rue André Suares, 75017 Paris} longitude=${#TestCase#long 1 Rue André Suares, 75017 Paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Rue des 2 ponts, paris} longitude=${#TestCase#long Rue des 2 ponts, paris}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cc4bde6e-c115-11e6-92aa-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>RER</mode>
+    <line>C</line>
+    <origine>Porte de Clichy</origine>
+    <destination>Saint-Michel</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cc4bde6f-c115-11e6-a59d-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cc4bde70-c115-11e6-b303-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 021 - 06 clos longvillers, Noailles -- Gare de Lyon" id="cc51359e-c115-11e6-b289-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 021 - 06 clos longvillers, Noailles -- Gare de Lyon" id="cc51359f-c115-11e6-962f-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat 06 clos longvillers, Noailles} longitude=${#TestCase#long 06 clos longvillers, Noailles}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cc5135a0-c115-11e6-8894-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>SNCF</mode>
+    <line>A</line>
+    <origine>Picardi de Saint-Sulpice Auteuil</origine>
+    <destination>Gare du Nord</destination>
+  </segment>
+  <segment>
+    <mode>RER</mode>
+    <line>D</line>
+    <origine>Gare du Nord</origine>
+    <destination>Gare de Lyon</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cc5135a1-c115-11e6-b333-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cc5135a2-c115-11e6-989e-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 029 - Gare de Lyon -- Gare Montparnasse" id="cc55f090-c115-11e6-8047-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 029 - Gare de Lyon -- Gare Montparnasse" id="cc55f091-c115-11e6-a2d4-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Gare de Lyon} longitude=${#TestCase#long Gare de Lyon}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Gare Montparnasse} longitude=${#TestCase#long Gare Montparnasse}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cc55f092-c115-11e6-b4bc-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line>91</line>
+    <origine>GARE DE LYON - DIDEROT</origine>
+    <destination>GARE MONTPARNASSE</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cc55f093-c115-11e6-bd99-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cc55f094-c115-11e6-890b-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+			<con:testStep type="request" name="RI_REF 030 - Les Gobelins (METRO), Paris -- Aéroport Orly" id="cc58afb0-c115-11e6-8664-5cc5d476dedc">
+				<con:settings/>
+				<con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+					<con:interface>SmartMoveServiceSoapBinding</con:interface>
+					<con:operation>getItinerary</con:operation>
+					<con:request name="RI_REF 030 - Les Gobelins (METRO), Paris -- Aéroport Orly" id="cc58afb1-c115-11e6-b749-5cc5d476dedc">
+						<con:settings/>
+						<con:encoding>UTF-8</con:encoding>
+						<con:endpoint>http://rvb.ixxi.net/SmartMovePort</con:endpoint>
+
+						<con:request><![CDATA[
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:smar="http://smartmove.ixxi/">\r
+  <soap:Header/>\r
+  <soap:Body>\r
+    <smar:getItinerary>\r
+         <startPoint type="address" latitude=${#TestCase#lat Les Gobelins (METRO), Paris} longitude=${#TestCase#long Les Gobelins (METRO), Paris}/>\r
+         <endPoint type="address" latitude=${#TestCase#lat Aéroport Orly} longitude=${#TestCase#long Aéroport Orly}/>\r
+         <time>2016-12-12T09:00:00+01:00</time>\r
+         <startFrom>true</startFrom>\r
+         <withTrafficEvents>false</withTrafficEvents>\r
+         <prefJourney>rvbFaster</prefJourney>\r
+         <withMobility>false</withMobility>\r
+         <withDetails>true</withDetails>\r
+   </smar:getItinerary>\r
+  </soap:Body>\r
+</soap:Envelope>
+						]]></con:request>
+						<con:assertion type="XQuery Match" id="cc58afb2-c115-11e6-810e-5cc5d476dedc" name="XQuery vérification de l'itinéraire ">
+                            <con:configuration>
+                                <path><![CDATA[
+                                    declare namespace ns1='http://smartmove.ixxi/';
+declare namespace SOAP-ENV='http://www.w3.org/2003/05/soap-envelope';
+declare namespace SOAP-ENC='http://www.w3.org/2003/05/soap-encoding';
+
+
+
+<res>
+{
+for $seg in //ns1:getItineraryResponse/return/itineraries/itinerarySegments
+where $seg/ns1:transport/@mode != "walk"
+return
+<segment>
+<mode>{data($seg/details/ns1:line/groupOfLines/@name)}</mode>
+<line> {data($seg/details/ns1:line/@name)} </line>
+<origine> {data($seg/details/points[position() = 1]/@name)} </origine>
+<destination> {data($seg/details/points[last()]/@name)} </destination>
+</segment>
+}
+</res>
+                                ]]></path>
+                                <content><![CDATA[
+<res>
+  <segment>
+    <mode>Metro</mode>
+    <line>7</line>
+    <origine>Les gobelins</origine>
+    <destination>Placed'Italie</destination>
+  </segment>
+  <segment>
+    <mode>Metro</mode>
+    <line>6</line>
+    <origine>Place d'Italie</origine>
+    <destination>Denfert</destination>
+  </segment>
+  <segment>
+    <mode>Bus RATP</mode>
+    <line>Orlyval</line>
+    <origine>Denfert</origine>
+    <destination>Orly</destination>
+  </segment>
+</res>
+                                ]]></content>
+                                <allowWildcards>false</allowWildcards>
+                            </con:configuration>
+                        </con:assertion>
+
+						<con:assertion type="SOAP Response" id="cc58afb3-c115-11e6-a781-5cc5d476dedc"/>
+						<con:assertion type="SOAP Fault Assertion" id="cc58afb4-c115-11e6-b2df-5cc5d476dedc"/>
+						<con:credentials>
+							<con:authType>No Authorization</con:authType>
+						</con:credentials>
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:wsaConfig mustUnderstand="NONE" version="200508"/>
+						<con:wsrmConfig version="1.2"/>
+					</con:request>
+				</con:config>
+			</con:testStep>
+    <con:properties>
+      <con:property>
+         <con:name>long Miromesnil (METRO), Paris</con:name>
+         <con:value>"2.315152"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Charles - Michel (METRO)</con:name>
+         <con:value>"48.846569"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Rue de la Montagne Sainte - Genevieve, 75005 paris</con:name>
+         <con:value>"2.348980"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Gare Saint Lazare</con:name>
+         <con:value>"2.324800"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 203 rue crimée 75019</con:name>
+         <con:value>"48.891781"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 27, rue Carnot, Ivry sur seine</con:name>
+         <con:value>"48.808174"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Rue des écoles, Chartrettes</con:name>
+         <con:value>"2.703888"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Parc De Sceaux (RER), Antony</con:name>
+         <con:value>"48.770861"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Charles - Michel (METRO)</con:name>
+         <con:value>"2.285940"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Gare de Lyon</con:name>
+         <con:value>"2.373555"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Musée Maillol</con:name>
+         <con:value>"2.325049"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 26, allée du Coudrier 91330 Yerres</con:name>
+         <con:value>"48.713510"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat rue jacques Prévert paris 75020</con:name>
+         <con:value>"48.864004"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 8 rue de l'étang 78430 Louveciennes</con:name>
+         <con:value>"2.113998"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long La Frette Montigny</con:name>
+         <con:value>"2.180411"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat EDGAR QUINET</con:name>
+         <con:value>"48.841130"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat La Frette Montigny</con:name>
+         <con:value>"48.980503"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 1 Rue André Suares, 75017 Paris</con:name>
+         <con:value>"2.311875"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 133 Avenue de la Résistance, 92350 Le Plessis-Robinson</con:name>
+         <con:value>"2.274456"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 76 av de La Bourdonnais 75007</con:name>
+         <con:value>"2.304520"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Port Royal (RER)</con:name>
+         <con:value>"48.839596"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long EDGAR QUINET</con:name>
+         <con:value>"2.325018"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 26, allée du Coudrier 91330 Yerres</con:name>
+         <con:value>"2.509803"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 13 rue Gambetta Saint-Ouen</con:name>
+         <con:value>"48.905470"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Musée Maillol</con:name>
+         <con:value>"48.854803"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 11 cité riverin, 75010 paris</con:name>
+         <con:value>"2.358790"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Aéroport de Roissy</con:name>
+         <con:value>"2.573779"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 31, rue de l'abbé groult, 75015 Paris</con:name>
+         <con:value>"48.841677"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Rue de la Montagne Sainte - Genevieve, 75005 paris</con:name>
+         <con:value>"48.849678"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 8 rue de l'étang 78430 Louveciennes</con:name>
+         <con:value>"48.859664"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Hôtel De Ville (METRO), Paris</con:name>
+         <con:value>"2.351810"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Robespierre</con:name>
+         <con:value>"2.422876"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 5 rue vercingétorix 75014 paris</con:name>
+         <con:value>"48.837839"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 13 rue Gambetta Saint-Ouen</con:name>
+         <con:value>"2.335855"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Les Gobelins (METRO), Paris</con:name>
+         <con:value>"2.352613"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 24 rue Jean Lurçat, 94800 villejuif</con:name>
+         <con:value>"48.786815"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 26, allée du Coudrier, 91330 Yerres</con:name>
+         <con:value>"2.509803"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Parc Zoologique de Paris (Zoo de Vincennes), Paris</con:name>
+         <con:value>"48.832767"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Gare de lyon</con:name>
+         <con:value>"48.843931"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Gare Montparnasse</con:name>
+         <con:value>"2.320226"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long rue jacques Prévert paris 75020</con:name>
+         <con:value>"2.388620"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Aéroport de Roissy</con:name>
+         <con:value>"49.004583"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 129, rue du Ranelagh, paris</con:name>
+         <con:value>"48.856273"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 55 rue Vedrines 91170 Viry Chatillon</con:name>
+         <con:value>"48.675014"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Rue de cotte Paris 75012</con:name>
+         <con:value>"2.376950"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 6 Rue Véronèse 75013</con:name>
+         <con:value>"48.833901"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Rue de cotte Paris 75012</con:name>
+         <con:value>"48.848434"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Rue des 2 ponts, paris</con:name>
+         <con:value>"48.851116"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 76 av de La Bourdonnais 75007</con:name>
+         <con:value>"48.854848"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Rue des 2 ponts Paris</con:name>
+         <con:value>"48.851116"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Gare d'Austerlitz</con:name>
+         <con:value>"48.843665"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Glacière</con:name>
+         <con:value>"48.831182"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Port Royal (RER)</con:name>
+         <con:value>"2.337088"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Gare de Lyon</con:name>
+         <con:value>"48.843931"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Vincennes (RER), Vincennes</con:name>
+         <con:value>"48.847253"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 11 cité riverin, 75010 paris</con:name>
+         <con:value>"48.870898"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 203 rue crimée 75019</con:name>
+         <con:value>"2.375476"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Aéroport Orly</con:name>
+         <con:value>"48.729784"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 6 Rue Louis Armand, 75015 Paris</con:name>
+         <con:value>"2.278430"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 31, rue de l'abbé groult, 75015 Paris</con:name>
+         <con:value>"2.294727"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Parc De Sceaux (RER), Antony</con:name>
+         <con:value>"2.310173"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 24 rue Jean Lurçat, 94800 villejuif</con:name>
+         <con:value>"2.369901"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Gare d'Austerlitz</con:name>
+         <con:value>"2.365111"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Glacière</con:name>
+         <con:value>"2.342755"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Hôtel De Ville (METRO), Paris</con:name>
+         <con:value>"48.857421"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Miromesnil (METRO), Paris</con:name>
+         <con:value>"48.873796"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Les Gobelins (METRO), Paris</con:name>
+         <con:value>"48.835717"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Aéroport Orly</con:name>
+         <con:value>"2.367909"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 26, allée du Coudrier, 91330 Yerres</con:name>
+         <con:value>"48.713510"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Parc Zoologique de Paris (Zoo de Vincennes), Paris</con:name>
+         <con:value>"2.420062"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 55 rue Vedrines 91170 Viry Chatillon</con:name>
+         <con:value>"2.371925"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Vincennes (RER), Vincennes</con:name>
+         <con:value>"2.431829"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Gare de lyon</con:name>
+         <con:value>"2.373555"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 6 Rue Véronèse 75013</con:name>
+         <con:value>"2.354990"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Gare Montparnasse</con:name>
+         <con:value>"48.841110"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Gare Saint Lazare</con:name>
+         <con:value>"48.875818"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Rue des 2 ponts, paris</con:name>
+         <con:value>"2.355895"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 133 Avenue de la Résistance, 92350 Le Plessis-Robinson</con:name>
+         <con:value>"48.783115"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 6 Rue Louis Armand, 75015 Paris</con:name>
+         <con:value>"48.832862"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Robespierre</con:name>
+         <con:value>"48.855707"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 129, rue du Ranelagh, paris</con:name>
+         <con:value>"2.267499"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long Rue des 2 ponts Paris</con:name>
+         <con:value>"2.355895"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 06 clos longvillers, Noailles</con:name>
+         <con:value>"49.328124"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 5 rue vercingétorix 75014 paris</con:name>
+         <con:value>"2.320787"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 27, rue Carnot, Ivry sur seine</con:name>
+         <con:value>"2.370301"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>long 06 clos longvillers, Noailles</con:name>
+         <con:value>"2.216535"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat Rue des écoles, Chartrettes</con:name>
+         <con:value>"48.488128"</con:value>
+      </con:property>
+      <con:property>
+         <con:name>lat 1 Rue André Suares, 75017 Paris</con:name>
+         <con:value>"48.895078"</con:value>
+      </con:property>
+    </con:properties>
+		
+		</con:testCase>
+        
+		<con:properties/>
+	</con:testSuite>
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+</con:soapui-project>

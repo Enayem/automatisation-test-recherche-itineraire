@@ -1,0 +1,255 @@
+# Exemple de fichier d'entrée de test de pondération
+# Il faut respecter l'indentation (2 espaces, pas de tabulation !)
+# Explication des champs :
+#
+# caseNumber : Numéro du cas de test
+# line : Libellé du cas de test
+# origin : Adresse de départ
+# destination : Adresse d'arrivée
+# itineraryCML : Itinéraire attendu par le calculateur.
+#                Il s'agit de sections de transport en commun (marche à pied ignorée)
+#                Chaque section contient les champs suivants :
+#                    mode: Choix du réseau, exemple : "SNCF", "RER", "Bus RATP", "Tram"file:///C:/Users/X2014940/Downloads/itinerariesOutput(1).yml
+#                    line: Nom de la ligne, exemple : A, B, H, 1, 256
+#                    direction: Direction de la ligne, uniquement à titre informatif (non utilisé pour la comparaison)
+#                    origin: Station de départ
+#                    destination:  Station d'arrivée
+# itineraryAlt (optionnel) : Itineraire alternatif permettant de valider la comparaison d'itinéraire
+# mode (optionnel) : Mode de transport, choix possible : "all", "ferre_tram" ou "bus_tram"
+# type (optionnel) : Type de route, choix possible : 1 (Le + rapide), 2 (- de corresp.) ou 3 (- de marche) 
+
+-
+  caseNumber: 1
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 2
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 3
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 4
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 5
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 6
+  line: "Château de vincennes (Metro) -- Bastilles (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Bastilles (Metro)"
+-
+  caseNumber: 7
+  line: "Château de vincennes (Metro) -- Bastilles (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Bastilles (Metro)"
+-
+  caseNumber: 8
+  line: "Château de vincennes (Metro) -- Bastilles (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Bastilles (Metro)"
+-
+  caseNumber: 9
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 10
+  line: "Château de vincennes (Metro) -- Porte de vincennes (Metro)"
+  origin: "Château de vincennes (Metro)"
+  destination: "Porte de vincennes (Metro)"
+-
+  caseNumber: 11
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 12
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 13
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 14
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 15
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 16
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 17
+  line: "Père lachaise (Metro) -- Belleville (Metro)"
+  origin: "Père lachaise (Metro)"
+  destination: "Belleville (Metro)"
+-
+  caseNumber: 18
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 19
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 20
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 21
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 22
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 23
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 24
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 25
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 26
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 27
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 28
+  line: "VilleJuif-Léo-Lagrange (Metro) -- Place d'Italie (Metro)"
+  origin: "VilleJuif-Léo-Lagrange (Metro)"
+  destination: "Place d'Italie (Metro)"
+-
+  caseNumber: 29
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 30
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 31
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 32
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 33
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 34
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 35
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 36
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 37
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 38
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 39
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 40
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 41
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 42
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 43
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 44
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 45
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 46
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"
+-
+  caseNumber: 47
+  line: "Créteil-L'Echat (Metro) -- Ecole Vétérinaire De Maisons-Alfort (Metro)"
+  origin: "Créteil-L'Echat (Metro)"
+  destination: "Ecole Vétérinaire De Maisons-Alfort (Metro)"

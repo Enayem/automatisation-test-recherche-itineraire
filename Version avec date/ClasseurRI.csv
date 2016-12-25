@@ -1,0 +1,21 @@
+Indice;AdressStart;AdressEnd;profil;preferNetwork;startFrom;withTrafficEvents;date;AssertionImpactPerturbation
+1;Les Gobelins (METRO);Gare de l'EST (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+2;Les Gobelins (METRO);Gare de l'EST (METRO);rvbFaster;Bus;true;false;2016-12-31T00:15:00;normal
+3;Les Gobelins (METRO);Gare de l'EST (METRO);rvbFaster;Bus;true;false;2017-01-01T23:40:00;normal
+4;Les Gobelins (METRO);Gare de l'EST (METRO);rvbFaster;Bus;true;false;2017-01-01T23:40:00;normal
+5;PONT DE NEUILLY (METRO);CHATEAU DE VINCENNES;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+6;PONT DE NEUILLY (METRO);CHATEAU DE VINCENNES;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+7;PONT DE NEUILLY (METRO);CHATEAU DE VINCENNES;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+8;MAIRIE DE MONTREUIL (METRO);PONT DE LEVALLOIS (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+9;MAIRIE DE MONTREUIL (METRO);PONT DE LEVALLOIS (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+10;MAIRIE DE MONTREUIL (METRO);PONT DE LEVALLOIS (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+11;VILLEJUIF - LOUIS ARAGON (METRO);GABRIEL PERI (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+12;VILLEJUIF - LOUIS ARAGON (METRO);GABRIEL PERI (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+13;VILLEJUIF - LOUIS ARAGON (METRO);GABRIEL PERI (METRO);rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+14;PORTE D ORLEANS;La Bonde, Massy;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+15;PORTE D ORLEANS;La Bonde, Massy;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+16;PORTE D ORLEANS;La Bonde, Massy;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+17;PORTE D ORLEANS;La Bonde, Massy;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+18;GARE MONTPARNASSE;GARE DE LYON;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+19;GARE MONTPARNASSE;GARE DE LYON;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal
+20;GARE MONTPARNASSE;GARE DE LYON;rvbFaster;Bus;true;false;2016-12-31T23:40:00;normal

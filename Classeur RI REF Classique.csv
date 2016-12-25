@@ -1,0 +1,73 @@
+Indice;AdressStart;AdressEnd;profil;preferNetwork;startFrom;withTrafficEvents;assertion1
+1;Château de Vincennes (METRO);La défense (METRO);rvbFaster;metro;true;false;Metro , 1 , Château de Vincennes , Esplanade de la Défense       
+2;Gallieni (METRO);Pont de  Levallois Becon  (METRO);rvbFaster;metro;true;false;Metro , 3 , Gallieni (Parc de Bagnolet) , Pont de Levallois-Bécon       
+3;Porte des Lilas (METRO);Gambetta  (METRO);rvbFaster;metro;true;false;Metro , 3B , Porte des Lilas , Gambetta
+4;Porte de Clignancourt (METRO);Mairie de Montrouge (METRO);rvbFaster;metro;true;false;Metro , 4 , Porte de Clignancourt , Mairie de Montrouge       
+5;Place d'Italie (METRO);Bobigny Pablo Picasso (METRO);rvbFaster;metro;true;false;Metro , 5 , Place d'Italie , Bobigny-Pablo-Picasso       
+6;Villejuif Louis Aragon (METRO);La courneuve (METRO);rvbFaster;metro;true;false;Metro , 7 , Villejuif-Louis Aragon , La Courneuve-8-Mai-1945       
+7;Mairie d'ivry  (METRO);La courneuve (METRO);rvbFaster;metro;true;false;Metro , 7 , Mairie d'Ivry , La Courneuve-8-Mai-1945       
+8;Créteil Pointe du lac (METRO);Balard (METRO);rvbFaster;metro;true;false;Metro , 8 , Pointe du Lac , Balard       
+9;Mairie de Montreuil (METRO);Pont de Sèvres (METRO);rvbFaster;metro;true;false;Metro , 9 , Mairie de Montreuil , Pont de Sèvres       
+10;Gare d'Austerlitz (METRO);Boulogne Pont de Saint-cloud (METRO);rvbFaster;metro;true;false;Metro , 10 , Gare d'Austerlitz , Boulogne Pont de Saint-Cloud       
+11;Châtelet (METRO);Mairie des Lilas (METRO);rvbFaster;metro;true;false;Metro , 11 , Châtelet , Mairie des Lilas       
+12;Mairie d'issy (METRO);Front Populaire (METRO);rvbFaster;metro;true;false;Metro , 12 , Mairie d'Issy , Front Populaire       
+13;Chatillon-Montrouge (METRO);Saint-Denis Université (METRO);rvbFaster;metro;true;false;Metro , 13 , Châtillon Montrouge , Saint-Denis-Université       
+14;Chatillon-Montrouge (METRO);Asnière Genevilliers Les courtilles  (METRO);rvbFaster;metro;true;false;Metro , 13 , Châtillon Montrouge , Asnières-Gennevilliers Les Courtilles       
+15;Olympiades (METRO);Saint-Lazare (METRO);rvbFaster;metro;true;false;Metro , 14 , Olympiades,  Saint-Lazare       
+16;Marne la vallée (RER);Cergy (RER);rvbFaster;rail;true;false;RER , A , Marne-la-Vallée Chessy , Cergy-Le-Haut       
+17;Marne la vallée (RER);Poissy (RER);rvbFaster;rail;true;false;RER , A , Marne-la-Vallée Chessy , Poissy       
+18;Boissy-St-Léger (RER);Saint-Germain en-Laye (RER);rvbFaster;rail;true;false;RER , A , Boissy-Saint-Léger , Saint-Germain-en-Laye       
+19;Fontenay aux Roses (RER);Aéroport Charles de Gaulle (RER);rvbFaster;rail;true;false;
+20;Fontenay aux Roses (RER);Mitry-Claye (RER);rvbFaster;rail;true;false;
+21;Saint-Rémy Lès Chevreuse (RER);Aéroport Charles de Gaulle (RER);rvbFaster;rail;true;false;RER , B , Saint-Rémy-lès-Chevreuse , Aéroport Charles de Gaulle 1       
+22;Choisy-le-Roi (RER);Viroflay Rive-gauche (RER);rvbFaster;rail;true;false;RER , C , Choisy-le-Roi , Viroflay-Rive Gauche       
+23;Choisy-le-Roi (RER);Epinay sur-Seine (RER);rvbFaster;rail;true;false;RER , C , Choisy-le-Roi , Epinay-sur-Seine       
+24;Haussmann Saint-Lazare (RER);Chelles Gournay (RER);rvbFaster;rail;true;false;RER , E , Haussmann-Saint-Lazare , Chelles Gournay       
+25;Haussmann Saint-Lazare (RER);Tournan (RER);rvbFaster;rail;true;false;RER , E , Haussmann-Saint-Lazare , Tournan       
+26;Creil (RER);Malesherbes (RER);rvbFaster;rail;true;false;
+27;Creil (RER);Melun (RER);rvbFaster;rail;true;false;
+28;Porte de Vincennes (TRAM);Pont de Garigliano (TRAM);rvbFaster;tram;true;false;Tramway , T3A , PORTE DE VINCENNES , PONT GARIGLIANO - HOPITAL EUROPEEN GEORGE POMPIDOU       
+29;Porte de Vincennes (TRAM);Porte de la Chappelle (TRAM);rvbFaster;tram;true;false;Tramway , T3B , PORTE DE VINCENNES , PORTE DE LA CHAPELLE       
+30;Chatillon-Montrouge (TRAM);Viroflay Rive-droite (TRAM);rvbFaster;tram;true;false;Tramway , T6 , CHATILLON - MONTROUGE , VIROFLAY - RIVE DROITE       
+31;Porte de Versailles (TRAM);Pont de Bezons (TRAM);rvbFaster;tram;true;false;Tramway , T2 , PORTE DE VERSAILLES , PONT DE BEZONS       
+32;Asnière Genevilliers Les courtilles (TRAM);Noisy-le-sec (TRAM);rvbFaster;tram;true;false;Tramway , T1 , LES COURTILLES , NOISY-LE-SEC RER       
+33;Marché de St-Denis (TRAM);Garges Sarcelles (TRAM);rvbFaster;tram;true;false;Tramway , T5 , MARCHE DE SAINT-DENIS , GARGES-SARCELLES RER       
+34;Epinay Orgemont (TRAM);Villetaneuse Université (TRAM);rvbFaster;tram;true;false;Tramway , T8 , EPINAY - ORGEMONT , DELAUNAY-BELLEVILLE ,Tramway , T8 , DELAUNAY-BELLEVILLE , VILLETANEUSE-UNIVERSITE       
+35;Saint-Denis Porte de Paris (TRAM);Villetaneuse Université (TRAM);rvbFaster;tram;true;false;Tramway , T8 , SAINT-DENIS - PORTE DE PARIS , VILLETANEUSE-UNIVERSITE       
+36;Le Bourget (TRAM);Bondy (TRAM);rvbFaster;tram;true;false;Tramway , T1 , MAURICE LACHATRE , PETIT NOISY       
+37;La défense (METRO);Château de Vincennes (METRO);rvbFaster;metro;true;false;Metro , 1 , Esplanade de la Défense , Château de Vincennes       
+38;Pont de  Levallois Becon  (METRO);Gallieni (METRO);rvbFaster;metro;true;false;Metro , 3 , Pont de Levallois-Bécon , Gallieni (Parc de Bagnolet)       
+39;Gambetta (METRO);Porte des Lilas (METRO);rvbFaster;metro;true;false;Metro , 3B , Gambetta , Porte des Lilas
+40;Mairie de Montrouge (METRO);Porte de Clignancourt (METRO);rvbFaster;metro;true;false;Metro , 4 , Mairie de Montrouge , Porte de Clignancourt       
+41;Bobigny Pablo Picasso (METRO);Place d'Italie (METRO);rvbFaster;metro;true;false;Metro , 5 , Bobigny-Pablo-Picasso , Place d'Italie       
+42;La courneuve (METRO);Villejuif Louis Aragon (METRO);rvbFaster;metro;true;false;Metro , 7 , La Courneuve-8-Mai-1945 , Villejuif-Louis Aragon       
+43;La courneuve (METRO);Mairie d'ivry  (METRO);rvbFaster;metro;true;false;Metro , 7 , La Courneuve-8-Mai-1945 , Mairie d'Ivry       
+44;Balard (METRO);Créteil Pointe du lac (METRO);rvbFaster;metro;true;false;Metro , 8 , Balard , Pointe du Lac       
+45;Pont de Sèvres (METRO);Mairie de Montreuil (METRO);rvbFaster;metro;true;false;Metro , 9 , Pont de Sèvres , Mairie de Montreuil       
+46;Boulogne Pont de Saint-cloud (METRO);Gare d'Austerlitz (METRO);rvbFaster;metro;true;false;Metro , 10 , Boulogne Pont de Saint-Cloud , Gare d'Austerlitz       
+47;Mairie des Lilas (METRO);Châtelet (METRO);rvbFaster;metro;true;false;Metro , 11 , Mairie des Lilas , Châtelet       
+48;Front Populaire (METRO);Mairie d'issy (METRO);rvbFaster;metro;true;false;Metro , 12 , Front Populaire , Mairie d'Issy       
+49;Saint-Denis Université (METRO);Chatillon-Montrouge (METRO);rvbFaster;metro;true;false;Metro , 13 , Saint-Denis-Université , Châtillon Montrouge       
+50;Asnière Genevilliers Les courtilles  (METRO);Chatillon-Montrouge (METRO);rvbFaster;metro;true;false;Metro , 13 , Asnières-Gennevilliers Les Courtilles , Châtillon Montrouge       
+51;Saint-Lazare (METRO);Olympiades (METRO);rvbFaster;metro;true;false;Metro , 14 , Saint-Lazare , Olympiades       
+52;Cergy (RER);Marne la vallée (RER);rvbFaster;rail;true;false;RER , A , Cergy-Le-Haut , Marne-la-Vallée Chessy       
+53;Poissy (RER);Marne la vallée (RER);rvbFaster;rail;true;false;RER , A , Poissy , Marne-la-Vallée Chessy       
+54;Saint-Germain en-Laye (RER);Boissy-St-Léger (RER);rvbFaster;rail;true;false;RER , A , Saint-Germain-en-Laye , Boissy-Saint-Léger       
+55;Aéroport Charles de Gaulle (RER);Fontenay aux Roses (RER);rvbFaster;rail;true;false;
+56;Mitry-Claye (RER);Fontenay aux Roses (RER);rvbFaster;rail;true;false;
+57;Aéroport Charles de Gaulle (RER);Saint-Rémy Lès Chevreuse (RER);rvbFaster;rail;true;false;RER , B , Aéroport Charles de Gaulle 1 , Saint-Rémy-lès-Chevreuse       
+58;Viroflay Rive-gauche (RER);Choisy-le-Roi (RER);rvbFaster;rail;true;false;RER , C , Viroflay-Rive Gauche , Choisy-le-Roi       
+59;Epinay sur-Seine (RER);Choisy-le-Roi (RER);rvbFaster;rail;true;false;RER , C , Epinay-sur-Seine , Choisy-le-Roi       
+60;Chelles Gournay (RER);Haussmann Saint-Lazare (RER);rvbFaster;rail;true;false;RER , E , Chelles Gournay , Haussmann-Saint-Lazare       
+61;Tournan (RER);Haussmann Saint-Lazare (RER);rvbFaster;rail;true;false;RER , E , Tournan , Haussmann-Saint-Lazare       
+62;Malesherbes (RER);Creil (RER);rvbFaster;rail;true;false;
+63;Melun (RER);Creil (RER);rvbFaster;rail;true;false;
+64;Pont de Garigliano (TRAM);Porte de Vincennes (TRAM);rvbFaster;tram;true;false;Tramway , T3A , PONT GARIGLIANO - HOPITAL EUROPEEN GEORGE POMPIDOU , PORTE DE VINCENNES       
+65;Porte de la Chappelle (TRAM);Porte de Vincennes (TRAM);rvbFaster;tram;true;false;Tramway , T3B , PORTE DE LA CHAPELLE , PORTE DE VINCENNES       
+66;Viroflay Rive-droite (TRAM);Chatillon-Montrouge (TRAM);rvbFaster;tram;true;false;Tramway , T6 , VIROFLAY - RIVE DROITE , CHATILLON - MONTROUGE       
+67;Pont de Bezons (TRAM);Porte de Versailles (TRAM);rvbFaster;tram;true;false;Tramway , T2 , PONT DE BEZONS , PORTE DE VERSAILLES       
+68;Noisy-le-sec (TRAM);Asnière Genevilliers Les courtilles (TRAM);rvbFaster;tram;true;false;Tramway , T1 , NOISY-LE-SEC RER , LES COURTILLES       
+69;Garges Sarcelles (TRAM);Marché de St-Denis (TRAM);rvbFaster;tram;true;false;Tramway , T5 , GARGES-SARCELLES RER , MARCHE DE SAINT-DENIS       
+70;Villetaneuse Université (TRAM);Epinay Orgemont (TRAM);rvbFaster;tram;true;false;Tramway , T8 , VILLETANEUSE-UNIVERSITE , DELAUNAY-BELLEVILLE,Tramway , T8 , DELAUNAY-BELLEVILLE , EPINAY - ORGEMONT
+71;Villetaneuse Université (TRAM);Saint-Denis Porte de Paris (TRAM);rvbFaster;tram;true;false;Tramway , T8 , VILLETANEUSE-UNIVERSITE , SAINT-DENIS - PORTE DE PARIS       
+72;Bondy (TRAM);Le Bourget (TRAM);rvbFaster;tram;true;false;Tramway , T1 , PETIT NOISY , MAURICE LACHATRE       

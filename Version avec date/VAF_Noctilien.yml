@@ -1,0 +1,120 @@
+# Exemple de fichier d'entrée de test de pondération
+# Il faut respecter l'indentation (2 espaces, pas de tabulation !)
+# Explication des champs :
+#
+# caseNumber : Numéro du cas de test
+# line : Libellé du cas de test
+# origin : Adresse de départ
+# destination : Adresse d'arrivée
+# itineraryCML : Itinéraire attendu par le calculateur.
+#                Il s'agit de sections de transport en commun (marche à pied ignorée)
+#                Chaque section contient les champs suivants :
+#                    mode: Choix du réseau, exemple : "SNCF", "RER", "Bus RATP", "Tram"file:///C:/Users/X2014940/Downloads/itinerariesOutput(1).yml
+#                    line: Nom de la ligne, exemple : A, B, H, 1, 256
+#                    direction: Direction de la ligne, uniquement à titre informatif (non utilisé pour la comparaison)
+#                    origin: Station de départ
+#                    destination:  Station d'arrivée
+# itineraryAlt (optionnel) : Itineraire alternatif permettant de valider la comparaison d'itinéraire
+# mode (optionnel) : Mode de transport, choix possible : "all", "ferre_tram" ou "bus_tram"
+# type (optionnel) : Type de route, choix possible : 1 (Le + rapide), 2 (- de corresp.) ou 3 (- de marche) 
+
+-
+  caseNumber: 1
+  line: "Les Gobelins (METRO) -- Gare de l'EST (METRO)"
+  origin: "Les Gobelins (METRO)"
+  destination: "Gare de l'EST (METRO)"
+-
+  caseNumber: 2
+  line: "Les Gobelins (METRO) -- Gare de l'EST (METRO)"
+  origin: "Les Gobelins (METRO)"
+  destination: "Gare de l'EST (METRO)"
+-
+  caseNumber: 3
+  line: "Les Gobelins (METRO) -- Gare de l'EST (METRO)"
+  origin: "Les Gobelins (METRO)"
+  destination: "Gare de l'EST (METRO)"
+-
+  caseNumber: 4
+  line: "Les Gobelins (METRO) -- Gare de l'EST (METRO)"
+  origin: "Les Gobelins (METRO)"
+  destination: "Gare de l'EST (METRO)"
+-
+  caseNumber: 5
+  line: "PONT DE NEUILLY (METRO) -- CHATEAU DE VINCENNES"
+  origin: "PONT DE NEUILLY (METRO)"
+  destination: "CHATEAU DE VINCENNES"
+-
+  caseNumber: 6
+  line: "PONT DE NEUILLY (METRO) -- CHATEAU DE VINCENNES"
+  origin: "PONT DE NEUILLY (METRO)"
+  destination: "CHATEAU DE VINCENNES"
+-
+  caseNumber: 7
+  line: "PONT DE NEUILLY (METRO) -- CHATEAU DE VINCENNES"
+  origin: "PONT DE NEUILLY (METRO)"
+  destination: "CHATEAU DE VINCENNES"
+-
+  caseNumber: 8
+  line: "MAIRIE DE MONTREUIL (METRO) -- PONT DE LEVALLOIS (METRO)"
+  origin: "MAIRIE DE MONTREUIL (METRO)"
+  destination: "PONT DE LEVALLOIS (METRO)"
+-
+  caseNumber: 9
+  line: "MAIRIE DE MONTREUIL (METRO) -- PONT DE LEVALLOIS (METRO)"
+  origin: "MAIRIE DE MONTREUIL (METRO)"
+  destination: "PONT DE LEVALLOIS (METRO)"
+-
+  caseNumber: 10
+  line: "MAIRIE DE MONTREUIL (METRO) -- PONT DE LEVALLOIS (METRO)"
+  origin: "MAIRIE DE MONTREUIL (METRO)"
+  destination: "PONT DE LEVALLOIS (METRO)"
+-
+  caseNumber: 11
+  line: "VILLEJUIF - LOUIS ARAGON (METRO) -- GABRIEL PERI (METRO)"
+  origin: "VILLEJUIF - LOUIS ARAGON (METRO)"
+  destination: "GABRIEL PERI (METRO)"
+-
+  caseNumber: 12
+  line: "VILLEJUIF - LOUIS ARAGON (METRO) -- GABRIEL PERI (METRO)"
+  origin: "VILLEJUIF - LOUIS ARAGON (METRO)"
+  destination: "GABRIEL PERI (METRO)"
+-
+  caseNumber: 13
+  line: "VILLEJUIF - LOUIS ARAGON (METRO) -- GABRIEL PERI (METRO)"
+  origin: "VILLEJUIF - LOUIS ARAGON (METRO)"
+  destination: "GABRIEL PERI (METRO)"
+-
+  caseNumber: 14
+  line: "PORTE D ORLEANS -- La Bonde, Massy"
+  origin: "PORTE D ORLEANS"
+  destination: "La Bonde, Massy"
+-
+  caseNumber: 15
+  line: "PORTE D ORLEANS -- La Bonde, Massy"
+  origin: "PORTE D ORLEANS"
+  destination: "La Bonde, Massy"
+-
+  caseNumber: 16
+  line: "PORTE D ORLEANS -- La Bonde, Massy"
+  origin: "PORTE D ORLEANS"
+  destination: "La Bonde, Massy"
+-
+  caseNumber: 17
+  line: "PORTE D ORLEANS -- La Bonde, Massy"
+  origin: "PORTE D ORLEANS"
+  destination: "La Bonde, Massy"
+-
+  caseNumber: 18
+  line: "GARE MONTPARNASSE -- GARE DE LYON"
+  origin: "GARE MONTPARNASSE"
+  destination: "GARE DE LYON"
+-
+  caseNumber: 19
+  line: "GARE MONTPARNASSE -- GARE DE LYON"
+  origin: "GARE MONTPARNASSE"
+  destination: "GARE DE LYON"
+-
+  caseNumber: 20
+  line: "GARE MONTPARNASSE -- GARE DE LYON"
+  origin: "GARE MONTPARNASSE"
+  destination: "GARE DE LYON"

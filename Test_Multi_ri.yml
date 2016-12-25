@@ -1,0 +1,370 @@
+# Exemple de fichier d'entrée de test de pondération
+# Il faut respecter l'indentation (2 espaces, pas de tabulation !)
+# Explication des champs :
+#
+# caseNumber : Numéro du cas de test
+# line : Libellé du cas de test
+# origin : Adresse de départ
+# destination : Adresse d'arrivée
+# itineraryCML : Itinéraire attendu par le calculateur.
+#                Il s'agit de sections de transport en commun (marche à pied ignorée)
+#                Chaque section contient les champs suivants :
+#                    mode: Choix du réseau, exemple : "SNCF", "RER", "Bus RATP", "Tram"file:///C:/Users/X2014940/Downloads/itinerariesOutput(1).yml
+#                    line: Nom de la ligne, exemple : A, B, H, 1, 256
+#                    direction: Direction de la ligne, uniquement à titre informatif (non utilisé pour la comparaison)
+#                    origin: Station de départ
+#                    destination:  Station d'arrivée
+# itineraryAlt (optionnel) : Itineraire alternatif permettant de valider la comparaison d'itinéraire
+# mode (optionnel) : Mode de transport, choix possible : "all", "ferre_tram" ou "bus_tram"
+# type (optionnel) : Type de route, choix possible : 1 (Le + rapide), 2 (- de corresp.) ou 3 (- de marche) 
+
+-
+  caseNumber: 2
+  line: "rue jacques Prévert paris 75020 -- Glacière"
+  origin: "rue jacques Prévert paris 75020"
+  destination: "Glacière"
+  itineraryCML:
+    - { mode: Metro, line: '2', origin: 'Père-Lachaise', destination: 'Nation'}
+    - { mode: Metro, line: '6', origin: 'Nation', destination: 'Glacière'}
+-
+  caseNumber: 6
+  line: "13 rue Gambetta Saint-Ouen -- Gare de Lyon"
+  origin: "13 rue Gambetta Saint-Ouen"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Garibaldi', destination: 'Saint-Lazare'}
+    - { mode: Metro, line: '14', origin: 'Saint-Lazare', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '85', origin: 'Eugene Lumeau Les écoles', destination: 'Porte de Clignancourt'}
+    - { mode: Metro, line: '4', origin: 'Porte de Clignancourt', destination: 'Chatelet'}
+    - { mode: Metro, line: '14', origin: 'Chatelet', destination: 'Gare de Lyon'}
+-
+  caseNumber: 7
+  line: "13 rue Gambetta Saint-Ouen -- Miromesnil (METRO), Paris"
+  origin: "13 rue Gambetta Saint-Ouen"
+  destination: "Miromesnil (METRO), Paris"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Garibaldi', destination: 'Miromesnil'}
+-
+  caseNumber: 13
+  line: "11 cité riverin, 75010 paris -- Gare de Lyon"
+  origin: "11 cité riverin, 75010 paris"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Bus RATP, line: '65', origin: 'JACQUES BONSERGENT', destination: 'GARE DE LYON.'}
+  itineraryALT:
+    - { mode: Metro, line: '4', origin: 'Château d''eau', destination: 'Chatelet'}
+    - { mode: RER, line: 'A', origin: 'Chatelet', destination: 'Gare de Lyon'}
+-
+  caseNumber: 16
+  line: "Gare de Lyon -- Robespierre"
+  origin: "Gare de Lyon"
+  destination: "Robespierre"
+  itineraryCML:
+    - { mode: RER, line: 'A', origin: 'Gare de Lyon', destination: 'Nation'}
+    - { mode: Metro, line: '9', origin: 'Nation', destination: 'Robespierre'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '57', origin: 'Gare de Lyon', destination: 'Maraicher'}
+    - { mode: Metro, line: '9', origin: 'Maraicher', destination: 'Robespierre'}
+-
+  caseNumber: 22
+  line: "31, rue de l'abbé groult, 75015 Paris -- Gare de Lyon"
+  origin: "31, rue de l'abbé groult, 75015 Paris"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '8', origin: 'Félix Faure', destination: 'Madeleine'}
+    - { mode: Metro, line: '14', origin: 'Madeleine', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Metro, line: '8', origin: 'Commerce', destination: 'Concorde'}
+    - { mode: Metro, line: '1', origin: 'Concorde', destination: 'Gare de Lyon'}
+-
+  caseNumber: 25
+  line: "129, rue du Ranelagh, paris -- Gare de Lyon"
+  origin: "129, rue du Ranelagh, paris"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '9', origin: 'Ranelagh', destination: 'Saint-Augustin'}
+    - { mode: Metro, line: '14', origin: 'Saint-Lazare', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Metro, line: '9', origin: 'Ranelagh', destination: 'Franklin Roosevelt'}
+    - { mode: Metro, line: '1', origin: 'Franklin Roosevelt', destination: 'Gare de Lyon'}
+-
+  caseNumber: 27
+  line: "Les Gobelins (METRO), Paris -- 27, rue Carnot, Ivry sur seine"
+  origin: "Les Gobelins (METRO), Paris"
+  destination: "27, rue Carnot, Ivry sur seine"
+  itineraryCML:
+    - { mode: Metro, line: '7', origin: 'Les Gobelins', destination: 'Le Kremlin-Bicêtre'}
+  itineraryALT:
+    - { mode: Metro, line: '7', origin: 'Les gobelins', destination: 'Porte de Choisy'}
+    - { mode: Bus RATP, line: '183', origin: 'Porte de Choisy', destination: 'inconnu'}
+-
+  caseNumber: 31
+  line: "Gare de Lyon --  Gare Saint Lazare"
+  origin: "Gare de Lyon"
+  destination: " Gare Saint Lazare"
+  itineraryCML:
+    - { mode: Metro, line: '14', origin: 'Gare de Lyon', destination: 'Saint-Lazare'}
+-
+  caseNumber: 33
+  line: " Gare Saint Lazare -- La Frette Montigny"
+  origin: " Gare Saint Lazare"
+  destination: "La Frette Montigny"
+  itineraryCML:
+    - { mode: SNCF, line: 'J', origin: 'Gare Saint-Lazare', destination: 'La Frette Montigny'}
+-
+  caseNumber: 34
+  line: "Port Royal (RER) -- Aéroport de Roissy "
+  origin: "Port Royal (RER)"
+  destination: "Aéroport de Roissy "
+  itineraryCML:
+    - { mode: RER, line: 'B', origin: 'Port Royal', destination: 'Aéroport Charles de Gaulle 2 TGV'}
+-
+  caseNumber: 35
+  line: "EDGAR QUINET  -- 133 Avenue de la Résistance, 92350 Le Plessis-Robinson"
+  origin: "EDGAR QUINET "
+  destination: "133 Avenue de la Résistance, 92350 Le Plessis-Robinson"
+  itineraryCML:
+    - { mode: Metro, line: '6', origin: 'Edgar-Quinet', destination: 'Denfert-Rochereau'}
+    - { mode: RER, line: 'B', origin: 'Denfert-Rochereau', destination: 'Robinson'}
+-
+  caseNumber: 36
+  line: "Vincennes (RER), Vincennes -- Parc De Sceaux (RER), Antony"
+  origin: "Vincennes (RER), Vincennes"
+  destination: "Parc De Sceaux (RER), Antony"
+  itineraryCML:
+    - { mode: RER, line: 'A', origin: 'Vincennes', destination: 'Châtelet-Les Halles'}
+    - { mode: RER, line: 'B', origin: 'Châtelet-Les Halles', destination: 'Parc de Sceaux'}
+-
+  caseNumber: 5
+  line: "203 rue crimée 75019 -- 55 rue Vedrines 91170 Viry Chatillon"
+  origin: "203 rue crimée 75019"
+  destination: "55 rue Vedrines 91170 Viry Chatillon"
+  itineraryCML:
+    - { mode: Bus RATP, line: ' 54', origin: ' CRIMEE - ARCHEREAU', destination: ' LA FAYETTE - DUNKERQUE'}
+    - { mode: RER, line: ' D', origin: ' Gare du Nord', destination: ' Juvisy-sur-Orge'}
+    - { mode:  Optile, line: 'DM03', origin: ' GARE DE JUVISY', destination: ' CAFÉ DES SPORTS'}
+  itineraryALT:
+    - { mode: Metro, line: '7', origin: 'Crimée', destination: 'Chatelet'}
+    - { mode: Metro, line: '14', origin: 'Chatelet', destination: 'Bibliothèque François Mittérand'}
+    - { mode: RER, line: 'C', origin: 'Bibliothèque François Mittérand', destination: 'Juvisy'}
+    - { mode: BUS RATP, line: 'DM3', origin: 'Juvisy', destination: 'Café des sports'}
+-
+  caseNumber: 11
+  line: "26, allée du Coudrier 91330 Yerres -- Gare de Lyon"
+  origin: "26, allée du Coudrier 91330 Yerres"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Optile, line: ' I', origin: ' GLAIEULS', destination: ' YERRES GARE'}
+    - { mode: RER, line: ' D', origin: ' Yerres', destination: ' Gare de Lyon (Banlieue)'}
+  itineraryALT:
+    - { mode: RER, line: 'A', origin: 'Boissy Saint Léger', destination: 'Gare de Lyon'}
+-
+  caseNumber: 23
+  line: "31, rue de l'abbé groult, 75015 Paris -- Hôtel De Ville (METRO), Paris"
+  origin: "31, rue de l'abbé groult, 75015 Paris"
+  destination: "Hôtel De Ville (METRO), Paris"
+  itineraryCML:
+    - { mode: Metro, line: ' 8', origin: ' Félix Faure', destination: ' Concorde'}
+    - { mode: Metro, line: ' 1', origin: ' Concorde', destination: ' Hôtel de Ville'}
+  itineraryALT:
+    - { mode: Metro, line: '8', origin: 'Commerce', destination: 'Concorde'}
+    - { mode: Metro, line: '1', origin: 'Concorde', destination: 'Hotel de ville'}
+-
+  caseNumber: 14
+  line: "11 cité riverin, 75010 paris -- Robespierre"
+  origin: "11 cité riverin, 75010 paris"
+  destination: "Robespierre"
+  itineraryCML:
+    - { mode: Metro, line: '9', origin: 'République', destination: 'Robespierre'}
+  itineraryALT:
+    - { mode: Bus RATP, line: ' 65', origin: ' JACQUES BONSERGENT', destination: 'REPUBLIQUE - MAGENTA'}
+    - { mode: Metro, line: '9', origin: 'République', destination: 'Robespierre'}
+-
+  caseNumber: 28
+  line: "Gare de Lyon -- Gare d'Austerlitz"
+  origin: "Gare de Lyon"
+  destination: "Gare d'Austerlitz"
+  itineraryCML:
+    - { mode: Bus RATP, line: ' 63', origin: ' GARE DE LYON', destination: ' GARE D'AUSTERLITZ'}
+  itineraryALT:
+    - { mode: Bus Ratp, line: '91', origin: 'Gare de Lyon', destination: 'Gare d''Austerlitz'}
+  itineraryALT:
+    - { mode: Bus Ratp, line: '57', origin: 'Gare de Lyon', destination: 'Gare d''Austerlitz'}
+  itineraryALT:
+    - { mode: Bus Ratp, line: '24', origin: 'Gare de Lyon', destination: 'Gare d''Austerlitz'}
+  itineraryALT:
+    - { mode: Metro, line: '1', origin: 'Gare de Lyon', destination: 'Bastille'}
+    - { mode: Metro, line: '5', origin: 'Bastille', destination: 'Gare d''Austerlitz'}
+-
+  caseNumber: 26
+  line: "Charles - Michel (METRO) -- 129, rue du Ranelagh, paris"
+  origin: "Charles - Michel (METRO)"
+  destination: "129, rue du Ranelagh, paris"
+  itineraryCML:
+    - { mode: Metro, line: '10', origin: 'Charles Michels', destination: 'Michel-Ange-Auteuil'}
+    - { mode: Metro, line: '9', origin: 'Michel-Ange-Auteuil', destination: 'Ranelagh'}
+-
+  caseNumber: 1
+  line: "rue jacques Prévert paris 75020 -- Gare de Lyon"
+  origin: "rue jacques Prévert paris 75020"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '2', origin: 'Père-Lachaise', destination: 'Nation'}
+    - { mode: Metro, line: '1', origin: 'Nation', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '61', origin: 'AUGUSTE METIVIER', destination: 'GARE DE LYON - DIDEROT'}
+-
+  caseNumber: 3
+  line: "6 Rue Véronèse 75013 -- 76 av de La Bourdonnais 75007"
+  origin: "6 Rue Véronèse 75013"
+  destination: "76 av de La Bourdonnais 75007"
+  itineraryCML:
+    - { mode: Metro, line: '6', origin: 'Place d'Italie', destination: 'La Motte-Picquet-Grenelle'}
+-
+  caseNumber: 4
+  line: "203 rue crimée 75019 -- Gare de Lyon"
+  origin: "203 rue crimée 75019"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '7', origin: 'Crimée', destination: 'Gare de l'Est'}
+    - { mode: Bus, line: '65', origin: 'Gare de l'Est', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Metro, line: '7', origin: 'Crimée', destination: 'Gare de l''Est'}
+    - { mode: Metro, line: '5', origin: 'Gare de l''Est', destination: 'Gare d''austerlitz'}
+-
+  caseNumber: 8
+  line: "5 rue vercingétorix 75014 paris -- Gare de Lyon"
+  origin: "5 rue vercingétorix 75014 paris"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Gaîté', destination: 'Champs-Elysées-Clémenceau'}
+    - { mode: Metro, line: '1', origin: 'Champs-Elysées-Clémenceau', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '91', origin: 'MONTPARNASSE 2 - GARE TGV', destination: 'GARE DE LYON - DIDEROT'}
+-
+  caseNumber: 10
+  line: "5 rue vercingétorix 75014 paris -- Rue de la Montagne Sainte - Genevieve, 75005 paris"
+  origin: "5 rue vercingétorix 75014 paris"
+  destination: "Rue de la Montagne Sainte - Genevieve, 75005 paris"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Gaîté', destination: 'Duroc'}
+    - { mode: Metro, line: '10', origin: 'Duroc', destination: 'Maubert-Mutualité'}
+-
+  caseNumber: 15
+  line: "Rue de cotte Paris 75012 -- 11 cité riverin, 75010 paris"
+  origin: "Rue de cotte Paris 75012"
+  destination: "11 cité riverin, 75010 paris"
+  itineraryCML:
+    - { mode: Metro, line: '8', origin: 'Ledru-Rollin', destination: 'Strasbourg saint Denis'}
+  itineraryALT:
+    - { mode: Metro, line: '5', origin: 'Bastille', destination: 'Jacques Bonsergent'}
+-
+  caseNumber: 24
+  line: "8 rue de l'étang 78430 Louveciennes -- Gare de Lyon"
+  origin: "8 rue de l'étang 78430 Louveciennes"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: SNCF, line: 'L', origin: 'Louveciennes', destination: 'La Défense (Grande Arche)'}
+    - { mode: RER, line: 'A', origin: 'La Défense (Grande Arche)', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: SNCF, line: 'L', origin: 'Louveciennes', destination: 'Saint-Lazare'}
+    - { mode: Metro, line: '14', origin: 'Saint-Lazare', destination: 'Gare de Lyon'}
+-
+  caseNumber: 32
+  line: "24 rue Jean Lurçat, 94800 villejuif -- Gare de lyon"
+  origin: "24 rue Jean Lurçat, 94800 villejuif"
+  destination: "Gare de lyon"
+  itineraryCML:
+    - { mode: Metro, line: '7', origin: 'Villejuif-Louis Aragon', destination: 'Place d'Italie'}
+    - { mode: Metro, line: '5', origin: 'Place d'Italie', destination: 'Gare d'austerliz'}
+  itineraryALT:
+    - { mode: Metro, line: '7', origin: 'Villejuif Louis-Aragon', destination: 'Place d''Italie'}
+    - { mode: Bus RATP, line: '57', origin: 'Place d''itlaie', destination: 'Van gogh'}
+-
+  caseNumber: 9
+  line: "5 rue vercingétorix 75014 paris -- 6 Rue Louis Armand, 75015 Paris"
+  origin: "5 rue vercingétorix 75014 paris"
+  destination: "6 Rue Louis Armand, 75015 Paris"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Gaité', destination: 'Porte de Vanves'}
+    - { mode: Tram, line: 'T3B', origin: 'Porte de vanves', destination: 'Balard'}
+  itineraryALT:
+    - { mode: Metro, line: '13', origin: 'Gaité', destination: 'Invalides'}
+    - { mode: Metro, line: '8', origin: 'Invalides', destination: 'Balard'}
+-
+  caseNumber: 12
+  line: "26, allée du Coudrier, 91330 Yerres -- Musée Maillol"
+  origin: "26, allée du Coudrier, 91330 Yerres"
+  destination: "Musée Maillol"
+  itineraryCML:
+    - { mode: RER, line: 'D', origin: 'Yerres', destination: 'Gare de Lyon'}
+    - { mode: Metro, line: '14', origin: 'Gare de Lyon', destination: 'Madeleine'}
+    - { mode: Metro, line: '12', origin: 'Madeleine', destination: 'Rue du bac'}
+-
+  caseNumber: 17
+  line: "Rue des écoles, Chartrettes -- Gare de Lyon"
+  origin: "Rue des écoles, Chartrettes"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: SNCF, line: 'R', origin: 'Gare Bois-le-Roi', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: RER, line: 'D', origin: 'Melun', destination: 'Gare de Lyon'}
+-
+  caseNumber: 18
+  line: "Rue des 2 ponts Paris -- Gare de Lyon"
+  origin: "Rue des 2 ponts Paris"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Bus RATP, line: '63', origin: 'Institut du Monde arabe', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '24', origin: 'Institut du Monde arabe', destination: 'Gare de Lyon'}
+-
+  caseNumber: 19
+  line: "Rue des 2 ponts, paris -- Parc Zoologique de Paris (Zoo de Vincennes), Paris"
+  origin: "Rue des 2 ponts, paris"
+  destination: "Parc Zoologique de Paris (Zoo de Vincennes), Paris"
+  itineraryCML:
+    - { mode: Bus RATP, line: '86', origin: 'Pont de Sully', destination: 'SAINT-MANDE - DEMI LUNE - PARC ZOOLOGIQUE'}
+  itineraryALT:
+    - { mode: Metro, line: '8', origin: 'Bastille', destination: 'Porte Dorée'}
+-
+  caseNumber: 20
+  line: "1 Rue André Suares, 75017 Paris -- Rue des 2 ponts, paris"
+  origin: "1 Rue André Suares, 75017 Paris"
+  destination: "Rue des 2 ponts, paris"
+  itineraryCML:
+    - { mode: RER, line: 'C', origin: 'Porte de Clichy', destination: 'Saint-Michel'}
+  itineraryALT:
+    - { mode: Metro, line: '13', origin: 'Porte de Clichy', destination: 'Champs Elysées Clémenceau'}
+    - { mode: Metro, line: '1', origin: 'Champs Elysee Clemenceau', destination: 'Saint-Paul'}
+-
+  caseNumber: 21
+  line: "06 clos longvillers, Noailles -- Gare de Lyon"
+  origin: "06 clos longvillers, Noailles"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: SNCF, line: 'A', origin: 'Picardi de Saint-Sulpice Auteuil', destination: 'Gare du Nord'}
+    - { mode: RER, line: 'D', origin: 'Gare du Nord', destination: 'Gare de Lyon'}
+-
+  caseNumber: 29
+  line: "Gare de Lyon -- Gare Montparnasse"
+  origin: "Gare de Lyon"
+  destination: "Gare Montparnasse"
+  itineraryCML:
+    - { mode: Bus RATP, line: '91', origin: 'GARE DE LYON - DIDEROT', destination: 'GARE MONTPARNASSE'}
+  itineraryALT:
+    - { mode: Metro, line: '14', origin: 'Ggare de Lyon', destination: 'Chatelet'}
+    - { mode: Metro, line: '4', origin: 'Chatelet', destination: 'Gare de Montparnasse'}
+-
+  caseNumber: 30
+  line: "Les Gobelins (METRO), Paris -- Aéroport Orly"
+  origin: "Les Gobelins (METRO), Paris"
+  destination: "Aéroport Orly"
+  itineraryCML:
+    - { mode: Metro, line: '7', origin: 'Les gobelins', destination: 'Placed'Italie'}
+    - { mode: Metro, line: '6', origin: 'Place d'Italie', destination: 'Denfert'}
+    - { mode: Bus RATP, line: 'Orlyval', origin: 'Denfert', destination: 'Orly'}
+  itineraryALT:
+    - { mode: Metro, line: '7', origin: 'Les gobelins', destination: 'Villejuif Louis-Aragon'}
+    - { mode: Tram, line: '7', origin: 'VilleJuif Louis-Aragon', destination: 'Orly'}

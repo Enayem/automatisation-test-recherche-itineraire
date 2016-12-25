@@ -1,0 +1,48 @@
+Indice;AdressStart;AdressEnd;profil;preferNetwork;startFrom;withTrafficEvents;date;AssertionImpactPerturbation
+1;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-9T09:00:00;normal
+2;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T09:00:00;critical
+3;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-20T09:00:00;critical
+4;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T09:00:00;normal
+5;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T00:15:00;critical
+6;Château de vincennes (Metro);Bastilles (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-9T09:00:00;normal
+7;Château de vincennes (Metro);Bastilles (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T09:00:00;critical
+8;Château de vincennes (Metro);Bastilles (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-20T09:00:00;critical
+9;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T09:00:00;normal
+10;Château de vincennes (Metro);Porte de vincennes (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T00:15:00;critical
+11;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-9T08:15:00;normal
+12;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T08:15:00;normal
+13;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T10:15:00;normal
+14;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-11T10:15:00;normal
+15;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T10:15:00;critical
+16;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T20:15:00;normal
+17;Père lachaise (Metro);Belleville (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T11:15:00;normal
+18;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-9T11:15:00;normal
+19;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T11:15:00;normal
+20;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T22:15:00;critical
+21;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-11T05:28:00;normal
+22;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-11T22:15:00;critical
+23;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T05:28:00;normal
+24;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T22:28:00;normal
+25;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-18T07:15:00;normal
+26;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-18T22:15:00;critical
+27;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-20T07:15:00;normal
+28;VilleJuif-Léo-Lagrange (Metro);Place d'Italie (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-20T22:15:00;normal
+29;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-09T08:15:00;normal
+30;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-09T22:15:00;normal
+31;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-10T00:15:00;normal
+32;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T00:15:00;normal
+33;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T12:15:00;normal
+34;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-12T22:15:00;critical
+35;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-13T00:15:00;critical
+36;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-13T02:15:00;normal
+37;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-16T20:15:00;normal
+38;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-16T22:15:00;critical
+39;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-17T00:15:00;critical
+40;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T00:15:00;critical
+41;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T05:15:00;normal
+42;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T21:15:00;normal
+43;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T22:15:00;normal
+44;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-21T23:15:00;normal
+45;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-22T00:15:00;normal
+46;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-22T05:15:00;normal
+47;Créteil-L'Echat (Metro);Ecole Vétérinaire De Maisons-Alfort (Metro);rvbFaster;metro,rail,tram;true;false;2016-12-23T22:15:00;normal

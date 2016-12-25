@@ -1,0 +1,59 @@
+# Exemple de fichier d'entrée de test de pondération
+# Il faut respecter l'indentation (2 espaces, pas de tabulation !)
+# Explication des champs :
+#
+# caseNumber : Numéro du cas de test
+# line : Libellé du cas de test
+# origin : Adresse de départ
+# destination : Adresse d'arrivée
+# itineraryCML : Itinéraire attendu par le calculateur.
+#                Il s'agit de sections de transport en commun (marche à pied ignorée)
+#                Chaque section contient les champs suivants :
+#                    mode: Choix du réseau, exemple : "SNCF", "RER", "Bus RATP", "Tram"file:///C:/Users/X2014940/Downloads/itinerariesOutput(1).yml
+#                    line: Nom de la ligne, exemple : A, B, H, 1, 256
+#                    direction: Direction de la ligne, uniquement à titre informatif (non utilisé pour la comparaison)
+#                    origin: Station de départ
+#                    destination:  Station d'arrivée
+# itineraryAlt (optionnel) : Itineraire alternatif permettant de valider la comparaison d'itinéraire
+# mode (optionnel) : Mode de transport, choix possible : "all", "ferre_tram" ou "bus_tram"
+# type (optionnel) : Type de route, choix possible : 1 (Le + rapide), 2 (- de corresp.) ou 3 (- de marche) 
+
+-
+  caseNumber: 1
+  line: "rue jacques Prévert paris 75020 -- Gare de Lyon"
+  origin: "rue jacques Prévert paris 75020"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '2', origin: 'Père-Lachaise', destination: 'Nation'}
+    - { mode: Metro, line: '1', origin: 'Nation', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '61', origin: 'AUGUSTE METIVIER', destination: 'GARE DE LYON - DIDEROT'}
+-
+  caseNumber: 8
+  line: "5 rue vercingétorix 75014 paris -- Gare de Lyon"
+  origin: "5 rue vercingétorix 75014 paris"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Gaîté', destination: 'Champs-Elysées-Clémenceau'}
+    - { mode: Metro, line: '1', origin: 'Champs-Elysées-Clémenceau', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: Bus RATP, line: '91', origin: 'MONTPARNASSE 2 - GARE TGV', destination: 'GARE DE LYON - DIDEROT'}
+-
+  caseNumber: 10
+  line: "5 rue vercingétorix 75014 paris -- Rue de la Montagne Sainte - Genevieve, 75005 paris"
+  origin: "5 rue vercingétorix 75014 paris"
+  destination: "Rue de la Montagne Sainte - Genevieve, 75005 paris"
+  itineraryCML:
+    - { mode: Metro, line: '13', origin: 'Gaîté', destination: 'Duroc'}
+    - { mode: Metro, line: '10', origin: 'Duroc', destination: 'Maubert-Mutualité'}
+-
+  caseNumber: 24
+  line: "8 rue de l'étang 78430 Louveciennes -- Gare de Lyon"
+  origin: "8 rue de l'étang 78430 Louveciennes"
+  destination: "Gare de Lyon"
+  itineraryCML:
+    - { mode: SNCF, line: 'L', origin: 'Louveciennes', destination: 'La Défense (Grande Arche)'}
+    - { mode: RER, line: 'A', origin: 'La Défense (Grande Arche)', destination: 'Gare de Lyon'}
+  itineraryALT:
+    - { mode: SNCF, line: 'L', origin: 'Louveciennes', destination: 'Saint-Lazare'}
+    - { mode: Metro, line: '14', origin: 'Saint-Lazare', destination: 'Gare de Lyon'}

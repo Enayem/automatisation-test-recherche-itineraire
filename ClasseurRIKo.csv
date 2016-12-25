@@ -1,0 +1,37 @@
+Indice;AdressStart;AdressEnd;profil;preferNetwork;startFrom;withTrafficEvents;assertion1;assertion2;assertion3;assertion4;assertion5
+2;rue jacques Prévert paris 75020;Glacière;rvbFaster;;true;false;Metro,2,Père-Lachaise,Nation,Metro,6,Nation,Glacière;;;;
+6;13 rue Gambetta Saint-Ouen;Gare de Lyon;rvbFaster;;true;false;Metro,13,Garibaldi,Saint-Lazare,Metro,14,Saint-Lazare,Gare de Lyon;Bus RATP,85,Eugene Lumeau Les écoles,Porte de Clignancourt,Metro,4,Porte de Clignancourt,Chatelet,Metro,14,Chatelet,Gare de Lyon;;;
+7;13 rue Gambetta Saint-Ouen;Miromesnil (METRO), Paris;rvbFaster;;true;false;Metro,13,Garibaldi,Miromesnil;;;;
+13;11 cité riverin, 75010 paris;Gare de Lyon;rvbFaster;;true;false;Bus RATP,65,JACQUES BONSERGENT,GARE DE LYON.;Metro,4,Château d''eau,Chatelet,RER,A,Chatelet,Gare de Lyon;;;
+16;Gare de Lyon;Robespierre;rvbFaster;;true;false;RER,A,Gare de Lyon,Nation,Metro,9,Nation,Robespierre;Bus RATP,57,Gare de Lyon,Maraicher,Metro,9,Maraicher,Robespierre;;;
+22;31, rue de l'abbé groult, 75015 Paris;Gare de Lyon;rvbFaster;;true;false;Metro,8,Félix Faure,Madeleine,Metro,14,Madeleine,Gare de Lyon;Metro,8,Commerce,Concorde,Metro,1,Concorde,Gare de Lyon;;;
+25;129, rue du Ranelagh, paris;Gare de Lyon;rvbFaster;;true;false;Metro,9,Ranelagh,Saint-Augustin,Metro,14,Saint-Lazare,Gare de Lyon;Metro,9,Ranelagh,Franklin Roosevelt,Metro,1,Franklin Roosevelt,Gare de Lyon;;;
+27;Les Gobelins (METRO), Paris;27, rue Carnot, Ivry sur seine;rvbFaster;;true;false;Metro,7,Les Gobelins,Le Kremlin-Bicêtre;Metro,7,Les gobelins,Porte de Choisy,Bus RATP,183,Porte de Choisy,inconnu;;;
+31;Gare de Lyon; Gare Saint Lazare;rvbFaster;;true;false;Metro,14,Gare de Lyon,Saint-Lazare;;;;
+33; Gare Saint Lazare;La Frette Montigny;rvbFaster;;true;false;SNCF,J,Gare Saint-Lazare,La Frette Montigny;;;;
+34;Port Royal (RER);Aéroport de Roissy ;rvbFaster;;true;false;RER,B,Port Royal,Aéroport Charles de Gaulle 2 TGV;;;;
+35;EDGAR QUINET ;133 Avenue de la Résistance, 92350 Le Plessis-Robinson;rvbFaster;;true;false;Metro,6,Edgar-Quinet,Denfert-Rochereau,RER,B,Denfert-Rochereau,Robinson;;;;
+36;Vincennes (RER), Vincennes;Parc De Sceaux (RER), Antony;rvbFaster;;true;false;RER,A,Vincennes,Châtelet-Les Halles,RER,B,Châtelet-Les Halles,Parc de Sceaux;;;;
+5;203 rue crimée 75019;55 rue Vedrines 91170 Viry Chatillon;rvbFaster;;true;false;Bus RATP, 54, CRIMEE - ARCHEREAU, LA FAYETTE - DUNKERQUE,RER, D, Gare du Nord, Juvisy-sur-Orge, Optile,DM03, GARE DE JUVISY, CAFÉ DES SPORTS;Metro,7,Crimée,Chatelet,Metro,14,Chatelet,Bibliothèque François Mittérand,RER,C,Bibliothèque François Mittérand,Juvisy,BUS RATP,DM3,Juvisy,Café des sports;;;
+11;26, allée du Coudrier 91330 Yerres;Gare de Lyon;rvbFaster;;true;false;Optile, I, GLAIEULS, YERRES GARE,RER, D, Yerres, Gare de Lyon (Banlieue);RER,A,Boissy Saint Léger,Gare de Lyon;;;
+23;31, rue de l'abbé groult, 75015 Paris;Hôtel De Ville (METRO), Paris;rvbFaster;;true;false;Metro, 8, Félix Faure, Concorde,Metro, 1, Concorde, Hôtel de Ville;Metro,8,Commerce,Concorde,Metro,1,Concorde,Hotel de ville;;;
+14;11 cité riverin, 75010 paris;Robespierre;rvbFaster;;true;false;Metro,9,République,Robespierre;Bus RATP, 65, JACQUES BONSERGENT,REPUBLIQUE - MAGENTA,Metro,9,République,Robespierre;;;
+28;Gare de Lyon;Gare d'Austerlitz;rvbFaster;;true;false;Bus RATP, 63, GARE DE LYON, GARE D'AUSTERLITZ;Bus Ratp,91,Gare de Lyon,Gare d''Austerlitz;Bus Ratp,57,Gare de Lyon,Gare d''Austerlitz;Bus Ratp,24,Gare de Lyon,Gare d''Austerlitz;Metro,1,Gare de Lyon,Bastille,Metro,5,Bastille,Gare d''Austerlitz
+26;Charles - Michel (METRO);129, rue du Ranelagh, paris;rvbFaster;;true;false;Metro,10,Charles Michels,Michel-Ange-Auteuil,Metro,9,Michel-Ange-Auteuil,Ranelagh;;;;
+1;rue jacques Prévert paris 75020;Gare de Lyon;rvbFaster;;true;false;Metro,2,Père-Lachaise,Nation,Metro,1,Nation,Gare de Lyon;Bus RATP,61,AUGUSTE METIVIER,GARE DE LYON - DIDEROT;;;
+3;6 Rue Véronèse 75013;76 av de La Bourdonnais 75007;rvbFaster;;true;false;Metro,6,Place d'Italie,La Motte-Picquet-Grenelle;;;;
+4;203 rue crimée 75019;Gare de Lyon;rvbFaster;;true;false;Metro,7,Crimée,Gare de l'Est,Bus,65,Gare de l'Est,Gare de Lyon;Metro,7,Crimée,Gare de l''Est,Metro,5,Gare de l''Est,Gare d''austerlitz;;;
+8;5 rue vercingétorix 75014 paris;Gare de Lyon;rvbFaster;;true;false;Metro,13,Gaîté,Champs-Elysées-Clémenceau,Metro,1,Champs-Elysées-Clémenceau,Gare de Lyon;Bus RATP,91,MONTPARNASSE 2 - GARE TGV,GARE DE LYON - DIDEROT;;;
+10;5 rue vercingétorix 75014 paris;Rue de la Montagne Sainte - Genevieve, 75005 paris;rvbFaster;;true;false;Metro,13,Gaîté,Duroc,Metro,10,Duroc,Maubert-Mutualité;;;;
+15;Rue de cotte Paris 75012;11 cité riverin, 75010 paris;rvbFaster;;true;false;Metro,8,Ledru-Rollin,Strasbourg saint Denis;Metro,5,Bastille,Jacques Bonsergent;;;
+24;8 rue de l'étang 78430 Louveciennes;Gare de Lyon;rvbFaster;;true;false;SNCF,L,Louveciennes,La Défense (Grande Arche),RER,A,La Défense (Grande Arche),Gare de Lyon;SNCF,L,Louveciennes,Saint-Lazare,Metro,14,Saint-Lazare,Gare de Lyon;;;
+32;24 rue Jean Lurçat, 94800 villejuif;Gare de lyon;rvbFaster;;true;false;Metro,7,Villejuif-Louis Aragon,Place d'Italie,Metro,5,Place d'Italie,Gare d'austerliz;Metro,7,Villejuif Louis-Aragon,Place d''Italie,Bus RATP,57,Place d''itlaie,Van gogh;;;
+9;5 rue vercingétorix 75014 paris;6 Rue Louis Armand, 75015 Paris;rvbFaster;;true;false;Metro,13,Gaité,Porte de Vanves,Tram,T3B,Porte de vanves,Balard;Metro,13,Gaité,Invalides,Metro,8,Invalides,Balard;;;
+12;26, allée du Coudrier, 91330 Yerres;Musée Maillol;rvbFaster;;true;false;RER,D,Yerres,Gare de Lyon,Metro,14,Gare de Lyon,Madeleine,Metro,12,Madeleine,Rue du bac;;;;
+17;Rue des écoles, Chartrettes;Gare de Lyon;rvbFaster;;true;false;SNCF,R,Gare Bois-le-Roi,Gare de Lyon;RER,D,Melun,Gare de Lyon;;;
+18;Rue des 2 ponts Paris;Gare de Lyon;rvbFaster;;true;false;Bus RATP,63,Institut du Monde arabe,Gare de Lyon;Bus RATP,24,Institut du Monde arabe,Gare de Lyon;;;
+19;Rue des 2 ponts, paris;Parc Zoologique de Paris (Zoo de Vincennes), Paris;rvbFaster;;true;false;Bus RATP,86,Pont de Sully,SAINT-MANDE - DEMI LUNE - PARC ZOOLOGIQUE;Metro,8,Bastille,Porte Dorée;;;
+20;1 Rue André Suares, 75017 Paris;Rue des 2 ponts, paris;rvbFaster;;true;false;RER,C,Porte de Clichy,Saint-Michel;Metro,13,Porte de Clichy,Champs Elysées Clémenceau,Metro,1,Champs Elysee Clemenceau,Saint-Paul;;;
+21;06 clos longvillers, Noailles;Gare de Lyon;rvbFaster;;true;false;SNCF,A,Picardi de Saint-Sulpice Auteuil,Gare du Nord,RER,D,Gare du Nord,Gare de Lyon;;;;
+29;Gare de Lyon;Gare Montparnasse;rvbFaster;;true;false;Bus RATP,91,GARE DE LYON - DIDEROT,GARE MONTPARNASSE;Metro,14,Ggare de Lyon,Chatelet,Metro,4,Chatelet,Gare de Montparnasse;;;
+30;Les Gobelins (METRO), Paris;Aéroport Orly;rvbFaster;;true;false;Metro,7,Les gobelins,Placed'Italie,Metro,6,Place d'Italie,Denfert,Bus RATP,Orlyval,Denfert,Orly;Metro,7,Les gobelins,Villejuif Louis-Aragon,Tram,7,VilleJuif Louis-Aragon,Orly;;;

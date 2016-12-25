@@ -1,0 +1,22 @@
+Indice;AdressStart;AdressEnd;profil;preferNetwork;startFrom;withTrafficEvents;assertion1
+1;129 rue du faubourg saint antoine, Paris;Val de Fontenay (RER);rvbFaster;;true;false;Bus RATP, 86, CROZATIER,NATION,RER, A, Nation, Val de Fontenay
+2;13 Impasse Alexandre Lecuyer;1 avenue Montaigne Noisy-Le-Grand;rvbFaster;;true;false;Metro,4,Porte de Clignancourt,Les Halles,RER,A,Châtelet-Les Halles,Noisy-le-Grand (Mont d'Est)
+3;13 rue Gambetta Saint-Ouen;Gare de Lyon;rvbFaster;;true;false;Metro,13,Garibaldi,Saint-Lazare,Metro,14,Saint-Lazare,Gare de Lyon
+4;13 rue Gambetta Saint-Ouen;Miromesnil (METRO), Paris;rvbFaster;;true;false;Metro,13,Garibaldi,Miromesnil
+5;11 cité riverin, 75010 paris;Gare de Lyon;rvbFaster;;true;false;Bus RATP,65,JACQUES BONSERGENT,GARE DE LYON.
+6;31, rue de l'abbé groult, 75015 Paris;Gare de Lyon;rvbFaster;;true;false;Metro,8,Félix Faure,Madeleine,Metro,14,Madeleine,Gare de Lyon
+7;129, rue du Ranelagh, paris;Gare de Lyon;rvbFaster;;true;false;Metro,9,Ranelagh,Saint-Augustin,Metro,14,Saint-Lazare,Gare de Lyon
+8;Les Gobelins (METRO), Paris;27, rue Carnot, Ivry sur seine;rvbFaster;;true;false;Metro,7,Les Gobelins,Le Kremlin-Bicêtre
+9;Gare de Lyon; Gare Saint Lazare;rvbFaster;;true;false;Metro,14,Gare de Lyon,Saint-Lazare
+10; Gare Saint Lazare;La Frette Montigny;rvbFaster;;true;false;SNCF,J,Gare Saint-Lazare,La Frette Montigny
+11;Port Royal (RER);Aéroport de Roissy ;rvbFaster;;true;false;RER,B,Port Royal,Aéroport Charles de Gaulle 2 TGV
+12;EDGAR QUINET ;133 Avenue de la Résistance, 92350 Le Plessis-Robinson;rvbFaster;;true;false;Metro,6,Edgar-Quinet,Denfert-Rochereau,RER,B,Denfert-Rochereau,Robinson
+13;Vincennes (RER), Vincennes;Parc De Sceaux (RER), Antony;rvbFaster;;true;false;RER,A,Vincennes,Châtelet-Les Halles,RER,B,Châtelet-Les Halles,Parc de Sceaux
+15;26, allée du Coudrier 91330 Yerres;Gare de Lyon;rvbFaster;;true;false;Optile, I, GLAIEULS, YERRES GARE,RER, D, Yerres, Gare de Lyon (Banlieue)
+16;31, rue de l'abbé groult, 75015 Paris;Hôtel De Ville (METRO), Paris;rvbFaster;;true;false;Metro, 8, Félix Faure, Concorde,Metro, 1, Concorde, Hôtel de Ville
+17;11 cité riverin, 75010 paris;Robespierre;rvbFaster;;true;false;Metro,9,République,Robespierre
+19;Charles - Michel (METRO);129, rue du Ranelagh, paris;rvbFaster;;true;false;Metro,10,Charles Michels,Michel-Ange-Auteuil,Metro,9,Michel-Ange-Auteuil,Ranelagh
+20;rue jacques Prévert paris 75020;Gare de Lyon;rvbFaster;;true;false;Metro,2,Père-Lachaise,Nation,Metro,1,Nation,Gare de Lyon
+21;5 rue vercingétorix 75014 paris;Gare de Lyon;rvbFaster;;true;false;Metro,13,Gaîté,Champs-Elysées-Clémenceau,Metro,1,Champs-Elysées-Clémenceau,Gare de Lyon
+22;5 rue vercingétorix 75014 paris;Rue de la Montagne Sainte - Genevieve, 75005 paris;rvbFaster;;true;false;Metro,13,Gaîté,Duroc,Metro,10,Duroc,Maubert-Mutualité
+23;8 rue de l'étang 78430 Louveciennes;Gare de Lyon;rvbFaster;;true;false;SNCF,L,Louveciennes,La Défense (Grande Arche),RER,A,La Défense (Grande Arche),Gare de Lyon
